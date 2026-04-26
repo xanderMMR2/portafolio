@@ -8,7 +8,7 @@ const translations = {
     nav_hire: "Hire Me",
     hero_available: "Available for opportunities",
     hero_title: "AI Agent Orchestrator & Intelligent Automation Specialist",
-    hero_sub: "B.S. Computer Science · Specialist in rapid delivery of autonomous systems through AI Agent Orchestration, Solution Validation (QA), and system integration. <strong>Proven success in delivering 9 production-grade automation solutions.</strong>",
+    hero_sub: "B.S. Computer Science · Specialist in rapid delivery of autonomous systems through AI Agent Orchestration, Solution Validation (QA), and system integration. <strong>Proven success in delivering 13 production-grade automation solutions.</strong>",
     hero_cta_impact: "See My Impact",
     hero_cta_cv: "Download CV",
     hero_cta_linkedin: "LinkedIn ↗",
@@ -25,9 +25,9 @@ const translations = {
     m3_label: "Financial Risk Mitigated",
     m3_detail: "SUNAFIL ($151K) + Promotions ($53K)",
     m4_label: "Man-Hours Freed",
-    m4_detail: "Across 9 automated processes in production",
-    m5_label: "Bots in Production",
-    m5_detail: "SAP, Kronos, Inaltele, OpenAI API & more",
+    m4_detail: "Across 13 automated processes delivered career-wide",
+    m5_label: "Career Automations Delivered",
+    m5_detail: "Telecom and Retail sectors (SAP, A360, .NET, OpenAI)",
     m6_label: "Time-to-Market (Cloud-Native)",
     m6_detail: "GCP Cloud Run + .NET via agentic delivery",
     exp_tag: "Career",
@@ -38,8 +38,8 @@ const translations = {
     exp_p_a2: "<strong>Delivered Cloud-Native PO generation solution</strong> on GCP/.NET via agentic code generation in <strong>2.5 weeks</strong> using CI/CD on Azure DevOps.",
     exp_p_a3: "<strong>Eliminated ~$53,300 USD/month in financial risk</strong> by leading logical architecture and QA of the promotions upload process.",
     exp_p_a4: "<strong>Mitigated $151,842 USD in SUNAFIL regulatory risk</strong> by systematizing overtime tracking across Kronos and Sharepoint.",
-    exp_p_a5: "<strong>Modernized data pipelines</strong>: replaced fragile UI scraping with direct Oracle DB queries and Python transformation scripts.",
-    exp_p_a6: "Built and scaled RPA corporate infrastructure from scratch — <strong>9 bots in concurrent production</strong> including SAP iRPA monitoring.",
+    exp_p_a5: "<strong>Technical Requirements Engineering</strong>: documented 17 business flows (PDD/SDD), with 9 prioritized and operational in production.",
+    exp_p_a6: "Built and scaled RPA corporate infrastructure from scratch — managing concurrent production bots including SAP iRPA monitoring.",
     exp_g_company: "GLOBAL HITSS (Telecommunications)",
     exp_g_role: "RPA Automation Consultant",
     exp_g_period: "Apr 2023 – Jun 2024",
@@ -122,7 +122,7 @@ const translations = {
     nav_hire: "Contrátame",
     hero_available: "Disponible para oportunidades",
     hero_title: "Orquestador de Agentes de IA y Especialista en Automatización Inteligente",
-    hero_sub: "Bachiller en Ciencias de la Computación · Especialista en entrega acelerada de sistemas autónomos mediante orquestación de agentes, validación de soluciones (QA) e integración de sistemas. <strong>Éxito comprobado en la entrega de 9 soluciones de automatización de grado de producción.</strong>",
+    hero_sub: "Bachiller en Ciencias de la Computación · Especialista en entrega acelerada de sistemas autónomos mediante orquestación de agentes, validación de soluciones (QA) e integración de sistemas. <strong>Éxito comprobado en la entrega de 13 soluciones de automatización de grado de producción.</strong>",
     hero_cta_impact: "Ver mi Impacto",
     hero_cta_cv: "Descargar CV",
     hero_cta_linkedin: "LinkedIn ↗",
@@ -139,9 +139,9 @@ const translations = {
     m3_label: "Riesgo Financiero Mitigado",
     m3_detail: "SUNAFIL ($151K) + Promociones ($53K)",
     m4_label: "Horas-Hombre Liberadas",
-    m4_detail: "En 9 procesos automatizados en producción",
-    m5_label: "Bots en Producción",
-    m5_detail: "SAP, Kronos, Inaltele, OpenAI API y más",
+    m4_detail: "En 13 procesos automatizados entregados históricamente",
+    m5_label: "Automatizaciones Entregadas",
+    m5_detail: "Sectores Telecom y Retail (SAP, A360, .NET, OpenAI)",
     m6_label: "Time-to-Market (Cloud-Native)",
     m6_detail: "GCP Cloud Run + .NET vía entrega agéntica",
     exp_tag: "Trayectoria",
@@ -152,8 +152,8 @@ const translations = {
     exp_p_a2: "<strong>Entregué una solución Cloud-Native de generación de OCs</strong> en GCP/.NET mediante generación agéntica de código en <strong>2.5 semanas</strong> usando CI/CD en Azure DevOps.",
     exp_p_a3: "<strong>Eliminé ~$53,300 USD/mes en riesgo financiero</strong> liderando la arquitectura lógica y el QA del proceso de carga de promociones.",
     exp_p_a4: "<strong>Mitigué $151,842 USD en riesgo regulatorio (SUNAFIL)</strong> sistematizando el control de horas extra en Kronos y Sharepoint.",
-    exp_p_a5: "<strong>Modernicé pipelines de datos</strong>: reemplacé el raspado de interfaz frágil por consultas directas a Oracle DB y scripts de transformación en Python.",
-    exp_p_a6: "Construí y escalé la infraestructura corporativa de RPA desde cero — <strong>9 bots en producción simultánea</strong> incluyendo monitoreo de SAP iRPA.",
+    exp_p_a5: "<strong>Ingeniería de Requerimientos Técnicos</strong>: documentación de 17 flujos de negocio (PDD/SDD), con 9 priorizados y operativos en producción.",
+    exp_p_a6: "Construí y escalé la infraestructura corporativa de RPA desde cero — gestionando bots en producción simultánea incluyendo monitoreo de SAP iRPA.",
     exp_g_company: "GLOBAL HITSS (Telecomunicaciones)",
     exp_g_role: "Consultor de Automatización RPA",
     exp_g_period: "Abr 2023 – Jun 2024",
@@ -378,7 +378,7 @@ function animateCounter(el, card) {
     if (progress < 1) requestAnimationFrame(tick);
     else {
       if (suffix === '+ hrs') el.textContent = '1,858' + suffix;
-      else if (suffix === ' bots') el.textContent = '9' + suffix;
+      else if (suffix === ' bots') el.textContent = '13' + suffix;
       else if (suffix === '.5 weeks') el.textContent = '2' + suffix;
       else el.textContent = prefix + Number(target).toLocaleString();
     }
