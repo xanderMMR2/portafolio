@@ -245,7 +245,12 @@ const setLanguage = (lang) => {
     }
   });
 
-  // Update dynamic elements that might need specific formatting
+  // Dynamic CV link update
+  const cvLink = document.getElementById('cv-download-link');
+  if (cvLink) {
+    cvLink.href = lang === 'en' ? 'CV-Alexander-Melendez-EN.pdf' : 'CV-Alexander-Melendez-ES.pdf';
+  }
+
   updateDynamicContent(lang);
 };
 
