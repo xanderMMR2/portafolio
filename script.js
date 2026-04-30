@@ -34,7 +34,7 @@ const translations = {
     exp_title: "Professional <span class=\"gradient-text\">Experience</span>",
     exp_p_role: "AI Automation Specialist",
     exp_p_period: "Jul 2024 – Present",
-    exp_p_a1: "<strong>Orchestrated OpenAI API integration</strong> with A360 to autonomously generate web & SEO content — freed <strong>1,858+ man-hours</strong>.",
+    exp_p_a1: "<strong>Orchestrated OpenAI API integration</strong> with A360 to autonomously generate web & SEO content — freed <strong>3,958+ man-hours</strong>.",
     exp_p_a2: "<strong>Delivered Cloud-Native PO generation solution</strong> on GCP/.NET via agentic code generation in <strong>2.5 weeks</strong> using CI/CD on Azure DevOps.",
     exp_p_a3: "<strong>Eliminated ~$53,300 USD/month in financial risk</strong> by leading logical architecture and QA of the promotions upload process.",
     exp_p_a4: "<strong>Mitigated $151,842 USD in SUNAFIL regulatory risk</strong> by systematizing overtime tracking across Kronos and Sharepoint.",
@@ -63,7 +63,7 @@ const translations = {
     proj2_desc: "Led logical architecture and QA of critical promotions upload flow preventing ~S/ 200,000 in misconfiguration losses per month. Deployed as a Job for business-rule validation before full portal launch.",
     proj3_badge: "AI Integration",
     proj3_title: "Web Descriptions & SEO — OpenAI API",
-    proj3_desc: "Integrated OpenAI API via REST actions in A360 to autonomously generate product descriptions and SEO copy at scale, eliminating manual content workflows and freeing <strong>1,858+ hours</strong>.",
+    proj3_desc: "Integrated OpenAI API via REST actions in A360 to autonomously generate product descriptions and SEO copy at scale, eliminating manual content workflows and freeing <strong>3,958+ hours</strong>.",
     proj4_badge: "$151K Regulatory Risk",
     proj4_title: "Overtime Control — SUNAFIL Compliance",
     proj4_desc: "Systematized complex overtime tracking across Kronos, Excel, and Sharepoint, mitigating ~$151,842 USD in SUNAFIL regulatory sanctions through automated reconciliation pipelines.",
@@ -148,7 +148,7 @@ const translations = {
     exp_title: "Experiencia <span class=\"gradient-text\">Profesional</span>",
     exp_p_role: "Especialista en Automatización con IA",
     exp_p_period: "Jul 2024 – Presente",
-    exp_p_a1: "<strong>Orquesté la integración de la API de OpenAI</strong> con A360 para generar contenido web y SEO de forma autónoma — liberando <strong>1,858+ horas-hombre</strong>.",
+    exp_p_a1: "<strong>Orquesté la integración de la API de OpenAI</strong> con A360 para generar contenido web y SEO de forma autónoma — liberando <strong>3,958+ horas-hombre</strong>.",
     exp_p_a2: "<strong>Entregué una solución Cloud-Native de generación de OCs</strong> en GCP/.NET mediante generación agéntica de código en <strong>2.5 semanas</strong> usando CI/CD en Azure DevOps.",
     exp_p_a3: "<strong>Eliminé ~$53,300 USD/mes en riesgo financiero</strong> liderando la arquitectura lógica y el QA del proceso de carga de promociones.",
     exp_p_a4: "<strong>Mitigué $151,842 USD en riesgo regulatorio (SUNAFIL)</strong> sistematizando el control de horas extra en Kronos y Sharepoint.",
@@ -177,7 +177,7 @@ const translations = {
     proj2_desc: "Liderazgo de arquitectura lógica y QA de flujo crítico de carga de promociones previniendo pérdidas de ~S/ 200,000 mensuales. Desplegado como Job para validación de reglas de negocio.",
     proj3_badge: "Integración de IA",
     proj3_title: "Descripciones Web y SEO — OpenAI API",
-    proj3_desc: "Integración de OpenAI API vía acciones REST en A360 para generar autónomamente descripciones de productos y textos SEO a escala, eliminando flujos manuales y liberando <strong>1,858+ horas</strong>.",
+    proj3_desc: "Integración de OpenAI API vía acciones REST en A360 para generar autónomamente descripciones de productos y textos SEO a escala, eliminando flujos manuales y liberando <strong>3,958+ horas</strong>.",
     proj4_badge: "$151K Riesgo Regulatorio",
     proj4_title: "Control de Horas Extra — Cumplimiento SUNAFIL",
     proj4_desc: "Sistematización del tracking de horas extra en Kronos, Excel y Sharepoint, mitigando ~$151,842 USD en sanciones de SUNAFIL mediante pipelines de conciliación automatizados.",
@@ -377,7 +377,7 @@ function animateCounter(el, card) {
 
     if (progress < 1) requestAnimationFrame(tick);
     else {
-      if (suffix === '+ hrs') el.textContent = '1,858' + suffix;
+      if (suffix === '+ hrs') el.textContent = '3,958' + suffix;
       else if (suffix === ' bots') el.textContent = '13' + suffix;
       else if (suffix === '.5 weeks') el.textContent = '2' + suffix;
       else el.textContent = prefix + Number(target).toLocaleString();
