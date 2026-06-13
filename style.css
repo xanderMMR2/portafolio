@@ -459,11 +459,11 @@ section {
 }
 
 .metric-card {
-  display: grid;
-  grid-template-columns: 90px minmax(0, 1fr);
-  align-items: start;
-  min-height: 170px;
-  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 200px;
+  padding: 28px 32px;
   background: var(--bg-surface);
   transition: background var(--transition);
 }
@@ -485,24 +485,28 @@ section {
 }
 
 .metric-value {
-  grid-row: span 3;
   color: var(--accent);
   font-family: var(--font-mono);
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.05;
+  margin-bottom: 28px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .metric-label {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: var(--text-primary);
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 700;
+  line-height: 1.18;
 }
 
 .metric-detail {
   color: var(--text-sec);
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.45;
 }
 
 .timeline {
@@ -891,14 +895,9 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .metric-card {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
   .metric-value {
-    grid-row: auto;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
+    font-size: 26px;
   }
 
   .tl-header {

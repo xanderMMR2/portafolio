@@ -1,7 +1,7 @@
 const translations = {
   en: {
-    brand_label: "AM / automation dossier",
-    nav_impact: "Record",
+    brand_label: "Alexander Melendez",
+    nav_impact: "Impact",
     nav_exp: "Work",
     nav_skills: "Stack",
     nav_contact: "Contact",
@@ -12,7 +12,7 @@ const translations = {
     hero_cta_impact: "Read the record",
     hero_cta_cv: "Download CV",
     hero_cta_linkedin: "LinkedIn",
-    bento_header: "Operating Record",
+    bento_header: "Verified Impact",
     bento_live: "Verified",
     bento_label: "Tracked business impact",
     ledger_source_label: "Source",
@@ -23,20 +23,20 @@ const translations = {
     ledger_delivery_value: "9 live flows · 17 documented",
     ledger_focus_label: "Focus",
     ledger_focus_value: "AI automation for ops teams",
-    impact_tag: "Operating Record",
-    impact_title: "Numbers recruiters can audit",
-    impact_sub: "Structured as a work log: metric, source, and system touched.",
+    impact_tag: "Impact",
+    impact_title: "Measured production impact",
+    impact_sub: "Metrics based on deployed automation, ROI calculations, and PDD/SDD documentation.",
     m1_label: "Total Business Impact Managed",
     m1_detail: "Direct savings plus risk mitigation",
     m2_label: "Accumulated Direct Savings",
     m2_detail: "Gross operational savings from 9 production bots",
     m3_label: "Financial Risk Mitigated",
     m3_detail: "SUNAFIL exposure plus promotion configuration risk",
-    m4_label: "Man-Hours Freed",
+    m4_label: "Hours Freed per Month",
     m4_detail: "Monthly operational capacity released",
     m5_label: "Career Automations Delivered",
     m5_detail: "Retail and telecom automation work",
-    m6_label: "Cloud Job Delivery Time",
+    m6_label: "Cloud Job Delivery",
     m6_detail: "GCP Cloud Run plus .NET delivery cycle",
     exp_tag: "Work History",
     exp_title: "Where the work happened",
@@ -123,11 +123,11 @@ const translations = {
     contact_loc_val: "Lima, Peru · Remote",
     contact_phone_label: "Phone / WhatsApp",
     footer_title: "AI Automation Specialist",
-    footer_sub: "Work record, metrics, and systems touched."
+    footer_sub: "AI automation, RPA, and cloud integrations."
   },
   es: {
-    brand_label: "AM / expediente de automatización",
-    nav_impact: "Registro",
+    brand_label: "Alexander Meléndez",
+    nav_impact: "Impacto",
     nav_exp: "Trabajo",
     nav_skills: "Stack",
     nav_contact: "Contacto",
@@ -138,7 +138,7 @@ const translations = {
     hero_cta_impact: "Leer el registro",
     hero_cta_cv: "Descargar CV",
     hero_cta_linkedin: "LinkedIn",
-    bento_header: "Registro Operativo",
+    bento_header: "Impacto Verificado",
     bento_live: "Verificado",
     bento_label: "Impacto de negocio trazado",
     ledger_source_label: "Fuente",
@@ -149,20 +149,20 @@ const translations = {
     ledger_delivery_value: "9 flujos vivos · 17 documentados",
     ledger_focus_label: "Foco",
     ledger_focus_value: "Automatización con IA para operaciones",
-    impact_tag: "Registro Operativo",
-    impact_title: "Números que un recruiter puede auditar",
-    impact_sub: "Estructurado como bitácora de trabajo: métrica, fuente y sistema tocado.",
+    impact_tag: "Impacto",
+    impact_title: "Impacto medido en producción",
+    impact_sub: "Métricas basadas en automatizaciones desplegadas, ROI calculado y documentación PDD/SDD.",
     m1_label: "Impacto de Negocio Total Gestionado",
     m1_detail: "Ahorro directo más mitigación de riesgos",
     m2_label: "Ahorro Directo Acumulado",
     m2_detail: "Ahorro operativo bruto de 9 bots en producción",
     m3_label: "Riesgo Financiero Mitigado",
     m3_detail: "Exposición SUNAFIL más riesgo en promociones",
-    m4_label: "Horas-Hombre Liberadas",
+    m4_label: "Horas Liberadas por Mes",
     m4_detail: "Capacidad operativa mensual liberada",
     m5_label: "Automatizaciones Entregadas",
     m5_detail: "Trabajo de automatización en retail y telecom",
-    m6_label: "Tiempo de Entrega de Job Cloud",
+    m6_label: "Entrega de Job Cloud",
     m6_detail: "Ciclo de entrega con GCP Cloud Run y .NET",
     exp_tag: "Historial",
     exp_title: "Dónde ocurrió el trabajo",
@@ -249,7 +249,7 @@ const translations = {
     contact_loc_val: "Lima, Perú · Remoto",
     contact_phone_label: "Teléfono / WhatsApp",
     footer_title: "Especialista en Automatización con IA",
-    footer_sub: "Registro de trabajo, métricas y sistemas tocados."
+    footer_sub: "Automatización con IA, RPA e integraciones cloud."
   }
 };
 
@@ -279,6 +279,8 @@ function setLanguage(lang) {
         ? "pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-EN.pdf"
         : "pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-ES.pdf";
   }
+
+  updateMetricValues(selected);
 }
 
 function getPreferredLang() {
@@ -325,21 +327,24 @@ if (themeToggleBtn) {
   });
 }
 
-function formatMetric(card) {
+function formatMetric(card, lang) {
   const target = Number.parseFloat(card.dataset.value);
   const prefix = card.dataset.prefix || "";
   const suffix = card.dataset.suffix || "";
+  const valueId = card.querySelector(".metric-value")?.id;
 
-  if (suffix === ".5 weeks") return "2.5 weeks";
-  if (suffix === " bots") return "13 bots";
-  if (suffix === "+ hrs") return "3,958+ hrs";
+  if (valueId === "m4") return lang === "es" ? "3,958+ horas/mes" : "3,958+ hrs/mo";
+  if (valueId === "m5") return "13";
+  if (valueId === "m6") return lang === "es" ? "2.5 semanas" : "2.5 weeks";
   return `${prefix}${Number(target).toLocaleString()}${suffix}`;
 }
 
-document.querySelectorAll(".metric-card").forEach((card) => {
-  const valueEl = card.querySelector(".metric-value");
-  if (valueEl) valueEl.textContent = formatMetric(card);
-});
+function updateMetricValues(lang) {
+  document.querySelectorAll(".metric-card").forEach((card) => {
+    const valueEl = card.querySelector(".metric-value");
+    if (valueEl) valueEl.textContent = formatMetric(card, lang);
+  });
+}
 
 document.querySelectorAll("a[href^='#']").forEach((link) => {
   link.addEventListener("click", (event) => {
