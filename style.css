@@ -267,11 +267,11 @@ section {
 #hero {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
-  align-items: end;
+  align-items: center;
   max-width: 1180px;
-  min-height: calc(100vh - 58px);
+  min-height: auto;
   margin: 0 auto;
-  padding: 82px 24px 58px;
+  padding: 68px 24px 62px;
   gap: 56px;
 }
 
