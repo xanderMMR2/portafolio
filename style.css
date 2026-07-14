@@ -276,6 +276,7 @@ section {
 }
 
 .hero-content {
+  min-width: 0;
   max-width: 690px;
 }
 
@@ -364,10 +365,12 @@ section {
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
+  min-width: 0;
 }
 
 .bento-widget {
   width: 100%;
+  min-width: 0;
   max-width: 430px;
   padding: 28px;
   border: 1px solid var(--border);
@@ -866,8 +869,24 @@ footer {
   }
 
   #hero {
+    width: 100%;
+    min-width: 0;
     padding: 58px 16px 42px;
     gap: 34px;
+  }
+
+  .hero-content,
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-badge {
+    max-width: 100%;
+    height: auto;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    overflow-wrap: anywhere;
   }
 
   .hero-name {
@@ -876,11 +895,44 @@ footer {
 
   .hero-title {
     font-size: 18px;
+    overflow-wrap: anywhere;
   }
 
   .hero-sub,
   .section-sub {
     font-size: 16px;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-ctas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .hero-ctas > a {
+    width: 100%;
+    min-width: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .hero-ctas > a:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .bento-widget {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .bento-header {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .bento-value {
+    font-size: 52px;
   }
 
   .section-title {
