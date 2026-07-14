@@ -1,763 +1,340 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="es" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Alexander Meléndez | AI Agent Orchestrator & Automation Specialist
-    </title>
+    <meta name="theme-color" content="#f2f3ed" />
+    <title>Alexander Meléndez | Ingeniería de Automatización con IA</title>
     <meta
       name="description"
-      content="Work record for Alexander Moisés Meléndez Ríos: AI automation, RPA, OpenAI API integrations, GCP Cloud Run jobs, and verified business impact."
+      content="Sistemas de automatización e IA desplegados por Alexander Meléndez: Python 3.12, OpenAI API, Gemini Vision, .NET y GCP Cloud Run."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=20260613-tools-spacing-fix" />
+    <link rel="stylesheet" href="style.css?v=20260714-production-map" />
+    <script src="script.js?v=20260714-production-map" defer></script>
   </head>
   <body>
-    <!-- ─── BACKGROUND ──────────────────────────── -->
-    <div class="bg-grid"></div>
+    <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
 
-    <!-- ─── NAV ───────────────────────────────────────── -->
-    <nav id="navbar">
-      <div class="nav-inner">
-        <span class="nav-logo" data-i18n="brand_label">Alexander Meléndez</span>
-        <ul class="nav-links">
-          <li><a href="#impact" data-i18n="nav_impact">Impact</a></li>
-          <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
-          <li><a href="#skills" data-i18n="nav_skills">Tools</a></li>
-          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-        </ul>
+    <header class="site-header" id="site-header">
+      <nav class="nav-shell" aria-label="Navegación principal">
+        <a class="wordmark" href="#inicio" aria-label="Alexander Meléndez, inicio">
+          <span>AM</span>
+          <strong>Alexander Meléndez</strong>
+        </a>
+
+        <div class="nav-links" id="desktop-nav">
+          <a href="#casos" data-i18n="nav_cases">Casos</a>
+          <a href="#trayectoria" data-i18n="nav_career">Trayectoria</a>
+          <a href="#herramientas" data-i18n="nav_tools">Herramientas</a>
+          <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+        </div>
+
         <div class="nav-actions">
-          <button
-            id="lang-toggle"
-            class="lang-toggle"
-            aria-label="Toggle Language"
-          >
-            <span id="lang-text">ES</span>
+          <button class="control-button" id="lang-toggle" type="button" aria-label="Cambiar idioma" title="Cambiar idioma">
+            <span id="lang-label">EN</span>
           </button>
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            aria-label="Toggle Theme"
-          >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              id="theme-icon"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
+          <button class="control-button symbol-button" id="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+            <span aria-hidden="true">◐</span>
           </button>
-          <a
-            href="mailto:alexandermelendezrios@gmail.com"
-            class="btn-nav"
-            data-i18n="nav_hire"
-            >Email</a
-          >
+          <a class="nav-email" href="mailto:alexandermelendezrios@gmail.com" data-i18n="nav_email">Escribir</a>
+          <button class="control-button symbol-button menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" title="Menú">
+            <span aria-hidden="true">≡</span>
+          </button>
         </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <a href="#casos" data-i18n="nav_cases">Casos</a>
+        <a href="#trayectoria" data-i18n="nav_career">Trayectoria</a>
+        <a href="#herramientas" data-i18n="nav_tools">Herramientas</a>
+        <a href="#contacto" data-i18n="nav_contact">Contacto</a>
       </div>
-    </nav>
+    </header>
 
-    <!-- ─── HERO ──────────────────────────────────────── -->
-    <section id="hero">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          <span data-i18n="hero_available">Remote · GMT-5 · open to US teams</span>
-        </div>
-        <h1 class="hero-name">
-          Alexander<br /><span class="gradient-text">Meléndez</span>
-        </h1>
-        <p class="hero-title" data-i18n="hero_title">
-          AI Automation Specialist · RPA, OpenAI API and cloud systems in production
-        </p>
-        <p class="hero-sub" data-i18n="hero_sub">
-          Computer Science graduate in Lima. I build and validate production
-          automation: A360 bots, REST integrations, Oracle queries, .NET services
-          and jobs on GCP Cloud Run, and OpenAI API workflows.
-          <strong
-            >13 shipped automations with ROI tracked.</strong
-          >
-        </p>
-        <div class="hero-ctas">
-          <a href="#impact" class="btn-primary" data-i18n="hero_cta_impact"
-            >Read the record</a
-          >
-          <a
-            href="pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-EN.pdf"
-            id="cv-download-link"
-            target="_blank"
-            class="btn-outline"
-            data-i18n="hero_cta_cv"
-            >Download CV</a
-          >
-          <a
-            href="https://www.linkedin.com/in/alexander-moises-melendez-rios-74912b15b/"
-            target="_blank"
-            rel="noopener"
-            class="btn-outline"
-            data-i18n="hero_cta_linkedin"
-            >LinkedIn ↗</a
-          >
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="bento-widget">
-          <div class="bento-header">
-            <span data-i18n="bento_header">Verified Impact</span>
-            <div class="bento-status">
-              <div class="bento-status-dot"></div>
-              <span data-i18n="bento_live">Verified</span>
-            </div>
+    <main id="main">
+      <section class="hero" id="inicio">
+        <div class="hero-copy reveal">
+          <div class="eyebrow-row">
+            <span class="live-mark"><i aria-hidden="true"></i><span data-i18n="hero_status">Lima · disponible para conversar</span></span>
+            <span class="hero-code">GMT-5 / ES-EN</span>
           </div>
-          <div class="bento-value">$399K+</div>
-          <div class="bento-label" data-i18n="bento_label">
-            Tracked business impact
-          </div>
-          <div class="ledger-table" aria-label="Portfolio evidence ledger">
-            <div class="ledger-row">
-              <span data-i18n="ledger_source_label">Source</span>
-              <strong data-i18n="ledger_source_value">ROI workbook + PDD/SDD</strong>
-            </div>
-            <div class="ledger-row">
-              <span data-i18n="ledger_systems_label">Systems</span>
-              <strong data-i18n="ledger_systems_value">A360 · Oracle · GCP · OpenAI</strong>
-            </div>
-            <div class="ledger-row">
-              <span data-i18n="ledger_delivery_label">Delivery</span>
-              <strong data-i18n="ledger_delivery_value">9 live flows · 17 documented</strong>
-            </div>
-            <div class="ledger-row">
-              <span data-i18n="ledger_focus_label">Focus</span>
-              <strong data-i18n="ledger_focus_value">AI automation for ops teams</strong>
-            </div>
+
+          <h1>Alexander<br />Meléndez</h1>
+          <p class="hero-role" data-i18n="hero_role">Ingeniero de automatización con IA</p>
+          <p class="hero-summary" data-i18n="hero_summary">
+            Convierto reglas operativas en servicios que llegan a producción. Trabajo con Python 3.12, APIs de modelos, .NET y GCP; mantengo revisión humana donde una decisión necesita contexto.
+          </p>
+
+          <div class="hero-actions">
+            <a class="action-primary" href="#casos" data-i18n="hero_cases">Explorar sistemas</a>
+            <a class="action-link" id="cv-download" href="pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-ES.pdf" target="_blank" rel="noopener">
+              <span data-i18n="hero_cv">CV en PDF</span><b aria-hidden="true">↗</b>
+            </a>
+            <a class="action-link" href="https://www.linkedin.com/in/alexander-moises-melendez-rios-74912b15b/" target="_blank" rel="noopener">
+              LinkedIn <b aria-hidden="true">↗</b>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ─── IMPACT METRICS ───────────────────────────── -->
-    <section id="impact">
-      <div class="section-inner">
-        <div class="section-tag" data-i18n="impact_tag">Impact</div>
-        <h2 class="section-title" data-i18n="impact_title">
-          Impacto medido en producción
-        </h2>
-        <p class="section-sub" data-i18n="impact_sub">
-          Métricas basadas en automatizaciones desplegadas, ROI calculado y
-          documentación PDD/SDD.
-        </p>
-
-        <div class="metrics-grid">
-          <div
-            class="metric-card"
-            data-value="399565"
-            data-prefix="$"
-            data-suffix=" USD"
-          >
-            <div class="metric-icon">💰</div>
-            <div class="metric-value" id="m1">$0</div>
-            <div class="metric-label" data-i18n="m1_label">
-              Total Business Impact Managed
+        <div class="hero-map reveal" aria-labelledby="map-title">
+          <div class="map-heading">
+            <div>
+              <span data-i18n="map_kicker">Sistema activo</span>
+              <strong id="map-title" data-i18n="map_title">Carga de promociones</strong>
             </div>
-            <div class="metric-detail" data-i18n="m1_detail">
-              Net profit + risk mitigation combined
-            </div>
-          </div>
-          <div
-            class="metric-card highlight"
-            data-value="194390"
-            data-prefix="$"
-            data-suffix=" USD"
-          >
-            <div class="metric-icon">📈</div>
-            <div class="metric-value" id="m2">$0</div>
-            <div class="metric-label" data-i18n="m2_label">
-              Net Direct Profit Generated
-            </div>
-            <div class="metric-detail" data-i18n="m2_detail">
-              Recovered with positive ROI
-            </div>
-          </div>
-          <div
-            class="metric-card"
-            data-value="205175"
-            data-prefix="$"
-            data-suffix=" USD"
-          >
-            <div class="metric-icon">🛡️</div>
-            <div class="metric-value" id="m3">$0</div>
-            <div class="metric-label" data-i18n="m3_label">
-              Financial Risk Mitigated
-            </div>
-            <div class="metric-detail" data-i18n="m3_detail">
-              SUNAFIL ($151K) + Promotions ($53K)
-            </div>
-          </div>
-          <div
-            class="metric-card"
-            data-value="3958"
-            data-prefix=""
-            data-suffix="+ hrs"
-          >
-            <div class="metric-icon">⏱️</div>
-            <div class="metric-value" id="m4">0</div>
-            <div class="metric-label" data-i18n="m4_label">Man-Hours Freed</div>
-            <div class="metric-detail" data-i18n="m4_detail">
-              Across 9 automated processes in production
-            </div>
-          </div>
-          <div
-            class="metric-card"
-            data-value="13"
-            data-prefix=""
-            data-suffix=""
-          >
-            <div class="metric-icon">🤖</div>
-            <div class="metric-value" id="m5">0</div>
-            <div class="metric-label" data-i18n="m5_label">
-              Career Automations Delivered
-            </div>
-            <div class="metric-detail" data-i18n="m5_detail">
-              Telecom and Retail sectors (SAP, A360, .NET, OpenAI)
-            </div>
-          </div>
-          <div
-            class="metric-card"
-            data-value="2"
-            data-prefix=""
-            data-suffix=".5 weeks"
-          >
-            <div class="metric-icon">🚀</div>
-            <div class="metric-value" id="m6">0</div>
-            <div class="metric-label" data-i18n="m6_label">
-              Time-to-Market (Cloud-Native)
-            </div>
-            <div class="metric-detail" data-i18n="m6_detail">
-              GCP Cloud Run + .NET via agentic delivery
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── EXPERIENCE ───────────────────────────────── -->
-    <section id="experience">
-      <div class="section-inner">
-        <div class="section-tag" data-i18n="exp_tag">Career</div>
-        <h2 class="section-title" data-i18n="exp_title">
-          Where the work happened
-        </h2>
-
-        <div class="timeline">
-          <!-- PROMART -->
-          <div class="tl-item current">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-header">
-                <div>
-                  <div class="tl-company">PROMART</div>
-                  <div class="tl-role" data-i18n="exp_p_role">
-                    AI Automation Specialist
-                  </div>
-                </div>
-                <div class="tl-period" data-i18n="exp_p_period">
-                  Jul 2024 – Present
-                </div>
-              </div>
-              <div class="tl-tag-row">
-                <span class="tag">OpenAI API</span>
-                <span class="tag">GCP Cloud Run</span>
-                <span class="tag">.NET</span>
-                <span class="tag">Azure DevOps</span>
-                <span class="tag">Pub/Sub</span>
-                <span class="tag">Oracle DB</span>
-                <span class="tag">Python</span>
-                <span class="tag">Microsoft Graph API</span>
-              </div>
-              <ul class="tl-achievements">
-                <li data-i18n="exp_p_a1">
-                  <strong>Built and deployed a promotions portal and rules engine
-                  with AI agents</strong> on .NET 10 and GCP, cutting a daily
-                  batch from <strong>3 hours to 2 minutes</strong>.
-                </li>
-                <li data-i18n="exp_p_a2">
-                  <strong>Delivered Cloud-Native PO generation solution</strong>
-                  on GCP/.NET via agentic code generation in
-                  <strong>2.5 weeks</strong> using CI/CD on Azure DevOps.
-                </li>
-                <li data-i18n="exp_p_a3">
-                  <strong>Integrated OpenAI API with A360</strong> for web
-                  content and SEO workflows, freeing
-                  <strong>1,800+ hours</strong> of manual writing work.
-                </li>
-                <li data-i18n="exp_p_a4">
-                  <strong
-                    >Mitigated $151,842 USD in SUNAFIL regulatory risk</strong
-                  >
-                  by systematizing overtime tracking across Kronos and
-                  Sharepoint.
-                </li>
-                <li data-i18n="exp_p_a5">
-                  <strong>Technical Requirements Engineering</strong>:
-                  documented 17 business flows (PDD/SDD), with 9 prioritized and
-                  operational in production.
-                </li>
-                <li data-i18n="exp_p_a6">
-                  Configured A360 infrastructure and virtual machines for
-                  concurrent production bots, including SAP iRPA monitoring.
-                </li>
-              </ul>
-            </div>
+            <span class="production-state" data-i18n="map_state">PRODUCCIÓN</span>
           </div>
 
-          <!-- GLOBAL HITSS -->
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-header">
-                <div>
-                  <div class="tl-company" data-i18n="exp_g_company">
-                    GLOBAL HITSS (Telecommunications)
-                  </div>
-                  <div class="tl-role" data-i18n="exp_g_role">
-                    RPA Automation Consultant
-                  </div>
-                </div>
-                <div class="tl-period" data-i18n="exp_g_period">
-                  Apr 2023 – Jun 2024
-                </div>
-              </div>
-              <div class="tl-tag-row">
-                <span class="tag">Automation Anywhere A360</span>
-                <span class="tag">PDD/SDD</span>
-                <span class="tag">Process Discovery</span>
-              </div>
-              <ul class="tl-achievements">
-                <li data-i18n="exp_g_a1">
-                  <strong>Developed 4 transactional automations</strong> for
-                  Claro Peru enabling mass activation/deactivation of cloud
-                  storage plans.
-                </li>
-                <li data-i18n="exp_g_a2">
-                  <strong>Built retry and exception handling patterns</strong>
-                  for bots running against legacy systems with frequent UI
-                  failures.
-                </li>
-                <li data-i18n="exp_g_a3">
-                  <strong>Produced full technical documentation</strong>
-                  (PDD/SDD) leading Process Discovery sessions directly with
-                  end-users.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- SOAPROS -->
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-header">
-                <div>
-                  <div class="tl-company">SOAPROS</div>
-                  <div class="tl-role" data-i18n="exp_s_role">
-                    Software Developer
-                  </div>
-                </div>
-                <div class="tl-period" data-i18n="exp_s_period">
-                  May 2022 – Dec 2022
-                </div>
-              </div>
-              <div class="tl-tag-row">
-                <span class="tag">Node.js</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">Hapi.js</span>
-                <span class="tag">Vue.js</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Agile/Scrum</span>
-              </div>
-              <ul class="tl-achievements">
-                <li data-i18n="exp_s_a1">
-                  <strong
-                    >Built a document tracking system</strong
-                  >
-                  for Movistar using Node.js + TypeScript under Agile/Scrum.
-                </li>
-                <li data-i18n="exp_s_a2">
-                  <strong>Ensured 100% SUNAT compliance</strong> by developing
-                  electronic invoicing modules.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- MOVITECH -->
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-header">
-                <div>
-                  <div class="tl-company">MOVITECH</div>
-                  <div class="tl-role" data-i18n="exp_m_role">
-                    Software Developer
-                  </div>
-                </div>
-                <div class="tl-period" data-i18n="exp_m_period">
-                  Mar 2022 – Jul 2022
-                </div>
-              </div>
-              <div class="tl-tag-row">
-                <span class="tag">Hapi.js</span>
-                <span class="tag">Vue.js</span>
-                <span class="tag">SQL</span>
-                <span class="tag">ER Design</span>
-              </div>
-              <ul class="tl-achievements">
-                <li data-i18n="exp_m_a1">
-                  Designed Entity-Relationship diagrams and developed billing
-                  systems backend + frontend.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── PROJECTS SHOWCASE ─────────────────────────── -->
-    <section id="projects">
-      <div class="section-inner">
-        <div class="section-tag" data-i18n="proj_tag">Projects</div>
-        <h2 class="section-title" data-i18n="proj_title">
-          Selected delivery notes
-        </h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-badge" data-i18n="proj1_badge">
-              3 h to 2 min
-            </div>
-            <div class="project-icon">☁️</div>
-            <h3 data-i18n="proj1_title">Promotions Validation and Upload</h3>
-            <p data-i18n="proj1_desc">
-              Built and deployed an AI-agent-assisted .NET 10 portal and rules
-              engine on Cloud Run. It validates prices, stock, margins, active
-              promotions, combos, contributions, and signage before producing
-              the final report.
-            </p>
-            <div class="project-tags">
-              <span>.NET 10</span><span>Cloud Run</span><span>Pub/Sub</span
-              ><span>Oracle / SQL Server</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-badge" data-i18n="proj2_badge">
-              Cloud job
-            </div>
-            <div class="project-icon">⚡</div>
-            <h3 data-i18n="proj2_title">
-              PO Generation - GCP Cloud Run
-            </h3>
-            <p data-i18n="proj2_desc">
-              Moved purchase-order generation from RPA into a Cloud Run Job
-              with .NET, Azure DevOps CI/CD, and Microsoft Graph API
-              integration. Shipped in <strong>2.5 weeks</strong>.
-            </p>
-            <div class="project-tags">
-              <span>.NET</span><span>GCP</span><span>Azure DevOps</span
-              ><span>Graph API</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-badge" data-i18n="proj3_badge">
-              AI Integration
-            </div>
-            <div class="project-icon">🤖</div>
-            <h3 data-i18n="proj3_title">
-              Web Descriptions and SEO
-            </h3>
-            <p data-i18n="proj3_desc">
-              Integrated OpenAI API via REST actions in A360 to autonomously
-              generate product descriptions and SEO copy at scale, eliminating
-              manual content workflows and freeing
-              <strong>1,800+ hours</strong>.
-            </p>
-            <div class="project-tags">
-              <span>OpenAI API</span><span>A360</span><span>REST API</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-badge" data-i18n="proj4_badge">
-              $151K Regulatory Risk
-            </div>
-            <div class="project-icon">🛡️</div>
-            <h3 data-i18n="proj4_title">
-              Overtime Control — SUNAFIL Compliance
-            </h3>
-            <p data-i18n="proj4_desc">
-              Systematized overtime tracking across Kronos, Excel, and
-              Sharepoint, mitigating ~$151,842 USD in SUNAFIL regulatory
-              exposure.
-            </p>
-            <div class="project-tags">
-              <span>Kronos</span><span>Sharepoint</span><span>Graph API</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-badge" data-i18n="proj5_badge">
-              DB Migration
-            </div>
-            <div class="project-icon">🗄️</div>
-            <h3 data-i18n="proj5_title">Oracle DB Direct Access</h3>
-            <p data-i18n="proj5_desc">
-              Replaced fragile UI-based data extraction (JSatellite screen
-              clicks) with direct Oracle DB queries via connection strings.
-              Combined with Python scripts to replace lengthy native A360 action
-              flows.
-            </p>
-            <div class="project-tags">
-              <span>Oracle DB</span><span>Python</span><span>A360</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-badge">Movistar</div>
-            <div class="project-icon">📡</div>
-            <h3 data-i18n="proj6_title">Document Tracking System</h3>
-            <p data-i18n="proj6_desc">
-              Built a document tracking system for Movistar using Node.js +
-              TypeScript with Git-based collaboration.
-            </p>
-            <div class="project-tags">
-              <span>Node.js</span><span>TypeScript</span><span>Agile</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-badge" data-i18n="proj7_badge">Personal Project</div>
-            <div class="project-icon">💳</div>
-            <h3 data-i18n="proj7_title">CobroApp — Installment Sales SaaS</h3>
-            <p data-i18n="proj7_desc">
-              Built and deployed a web SaaS for installment payment management:
-              <strong>React 18 + Node.js + PostgreSQL</strong> on
-              <strong>Cloudflare Pages + GCP Cloud Run</strong>, with Cloud Build
-              CI/CD pipeline and automated daily backups via GitHub Actions.
-            </p>
-            <div class="project-tags">
-              <span>React 18</span><span>Node.js</span><span>GCP Cloud Run</span><span>Cloudflare Pages</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── SKILLS ────────────────────────────────────── -->
-    <section id="skills">
-      <div class="section-inner">
-        <div class="section-tag" data-i18n="skills_tag">Expertise</div>
-        <h2 class="section-title" data-i18n="skills_title">
-          Technical tools used in production
-        </h2>
-
-        <div class="skills-grid">
-          <div class="skill-group">
-            <div class="skill-group-icon">🧠</div>
-            <h3 data-i18n="skills_g1_title">AI & Orchestration</h3>
-            <ul>
-              <li data-i18n="skills_g1_s1">LLM Orchestration (OpenAI API)</li>
-              <li data-i18n="skills_g1_s2">Agentic Code Generation</li>
-              <li data-i18n="skills_g1_s3">AI-Assisted SDLC</li>
-              <li data-i18n="skills_g1_s4">Business Logic Validation (QA)</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-icon">🤖</div>
-            <h3 data-i18n="skills_g2_title">RPA & Automation</h3>
-            <ul>
-              <li data-i18n="skills_g2_s1">
-                Automation Anywhere A360 (Master)
-              </li>
-              <li data-i18n="skills_g2_s2">Process Design (PDD/SDD)</li>
-              <li data-i18n="skills_g2_s3">Bot Architecture & Resilience</li>
-              <li data-i18n="skills_g2_s4">SAP iRPA Monitoring</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-icon">☁️</div>
-            <h3 data-i18n="skills_g3_title">Cloud & DevOps</h3>
-            <ul>
-              <li data-i18n="skills_g3_s1">GCP Cloud Run (Jobs)</li>
-              <li data-i18n="skills_g3_s2">Azure DevOps (CI/CD)</li>
-              <li data-i18n="skills_g3_s3">Microsoft Graph API</li>
-              <li data-i18n="skills_g3_s4">GitHub</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-icon">⚙️</div>
-            <h3 data-i18n="skills_g4_title">Engineering</h3>
-            <ul>
-              <li data-i18n="skills_g4_s1">
-                Python (scripting, data transformation)
-              </li>
-              <li data-i18n="skills_g4_s2">SQL (Oracle DB, SQLite)</li>
-              <li data-i18n="skills_g4_s3">Node.js / TypeScript</li>
-              <li data-i18n="skills_g4_s4">.NET (orchestrated delivery)</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-icon">🏢</div>
-            <h3 data-i18n="skills_g5_title">Enterprise Systems</h3>
-            <ul>
-              <li>SAP</li>
-              <li>Kronos</li>
-              <li>Sharepoint</li>
-              <li>Monday / TickTick</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-icon">📋</div>
-            <h3 data-i18n="skills_g6_title">Process & Leadership</h3>
-            <ul>
-              <li data-i18n="skills_g6_s1">Process Discovery & Analysis</li>
-              <li data-i18n="skills_g6_s2">Requirements Engineering</li>
-              <li data-i18n="skills_g6_s3">Agile / Scrum</li>
-              <li data-i18n="skills_g6_s4">17 Technical Docs (PDD/SDD)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── CERTIFICATIONS ────────────────────────────── -->
-    <section id="certs">
-      <div class="section-inner">
-        <div class="section-tag" data-i18n="certs_tag">Credentials</div>
-        <h2 class="section-title" data-i18n="certs_title">
-          Education and certifications
-        </h2>
-        <div class="certs-grid">
-          <div class="cert-card gold">
-            <div class="cert-icon">🏆</div>
-            <div class="cert-body">
-              <div class="cert-title">
-                Certified Master RPA Professional (A360)
-              </div>
-              <div class="cert-issuer">Automation Anywhere · November 2024</div>
-            </div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-icon">🎖️</div>
-            <div class="cert-body">
-              <div class="cert-title" data-i18n="cert2_title">
-                Advanced Automation Certification
-              </div>
-              <div class="cert-issuer">Automation Anywhere · October 2024</div>
-            </div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-icon">📜</div>
-            <div class="cert-body">
-              <div class="cert-title" data-i18n="cert3_title">
-                Essentials Automation Certification
-              </div>
-              <div class="cert-issuer">
-                Automation Anywhere · September 2024
-              </div>
-            </div>
-          </div>
-          <div class="cert-card">
-            <div class="cert-icon">🎓</div>
-            <div class="cert-body">
-              <div class="cert-title" data-i18n="cert4_title">
-                B.S. in Computer Science
-              </div>
-              <div class="cert-issuer">
-                Universidad Peruana de Ciencias Aplicadas (UPC) · 2023
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── CONTACT ───────────────────────────────────── -->
-    <section id="contact">
-      <div class="section-inner">
-        <div class="section-tag" data-i18n="contact_tag">Let's Talk</div>
-        <h2 class="section-title" data-i18n="contact_title">
-          Open a hiring conversation
-        </h2>
-        <p class="section-sub" data-i18n="contact_sub">
-          Best use: AI automation, RPA modernization, API integrations, and
-          cloud jobs for operations teams.
-        </p>
-        <div class="contact-cards">
-          <a
-            href="mailto:alexandermelendezrios@gmail.com"
-            class="contact-card"
-            id="contact-email"
-          >
-            <span class="contact-icon">✉️</span>
-            <span class="contact-label">Email</span>
-            <span class="contact-value">alexandermelendezrios@gmail.com</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/alexander-moises-melendez-rios-74912b15b/"
-            target="_blank"
-            rel="noopener"
-            class="contact-card"
-            id="contact-linkedin"
-          >
-            <span class="contact-icon">💼</span>
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">alexander-moises-melendez-rios</span>
-          </a>
-          <div class="contact-card" id="contact-location">
-            <span class="contact-icon">📍</span>
-            <span class="contact-label" data-i18n="contact_loc_label"
-              >Location</span
+          <div class="canvas-wrap">
+            <canvas
+              id="system-map"
+              width="920"
+              height="520"
+              role="img"
+              aria-label="Flujo animado desde archivos Excel y reglas de negocio hacia servicios de nube, bases de datos y revisión humana"
             >
-            <span class="contact-value" data-i18n="contact_loc_val"
-              >Lima, Peru · Open to Remote</span
-            >
+              Excel y reglas de negocio se procesan en .NET y GCP, se validan con Oracle y SQL Server y pasan por revisión humana cuando corresponde.
+            </canvas>
+            <div class="map-result" aria-hidden="true">
+              <span data-i18n="map_before">ANTES</span>
+              <strong>3 h</strong>
+              <b>→</b>
+              <span data-i18n="map_after">AHORA</span>
+              <strong>2 min</strong>
+            </div>
           </div>
-          <div class="contact-card" id="contact-phone">
-            <span class="contact-icon">📱</span>
-            <span class="contact-label" data-i18n="contact_phone_label"
-              >Phone / WhatsApp</span
-            >
-            <span class="contact-value">+51 920 438 564</span>
+
+          <div class="map-legend">
+            <span><i class="legend-input"></i><b data-i18n="map_legend_input">Entrada</b></span>
+            <span><i class="legend-service"></i><b data-i18n="map_legend_service">Servicio</b></span>
+            <span><i class="legend-review"></i><b data-i18n="map_legend_review">Revisión humana</b></span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ─── FOOTER ────────────────────────────────────── -->
-    <footer>
-      <div class="footer-inner">
-        <span class="nav-logo" data-i18n="brand_label">Alexander Meléndez</span>
-        <p>
-          © 2026 Alexander Moisés Meléndez Ríos ·
-          <span data-i18n="footer_title">AI Agent Orchestrator</span>
-        </p>
-        <p class="footer-sub" data-i18n="footer_sub">
-          Automatización con IA, RPA e integraciones cloud.
-        </p>
-      </div>
+      <section class="signal-band" id="impacto" aria-label="Resultados medidos">
+        <div class="signal-intro">
+          <span data-i18n="signal_title">Resultados medidos</span>
+          <small data-i18n="signal_source">ROI y documentación operativa</small>
+        </div>
+        <div class="signal-metric">
+          <strong data-count="399565" data-format="usd">$399,565</strong>
+          <span data-i18n="metric_impact">impacto gestionado</span>
+        </div>
+        <div class="signal-metric">
+          <strong data-count="3958" data-format="hours">3,958+</strong>
+          <span data-i18n="metric_hours">horas liberadas por mes</span>
+        </div>
+        <div class="signal-metric">
+          <strong data-count="13" data-format="plain">13</strong>
+          <span data-i18n="metric_delivery">automatizaciones entregadas</span>
+        </div>
+        <div class="signal-metric signal-accent">
+          <strong>98.9%</strong>
+          <span data-i18n="metric_cycle">menos tiempo por lote</span>
+        </div>
+      </section>
+
+      <section class="cases-section section-shell" id="casos">
+        <header class="section-heading reveal">
+          <div>
+            <span class="section-index">01</span>
+            <span class="section-kicker" data-i18n="cases_kicker">Sistemas seleccionados</span>
+          </div>
+          <h2 data-i18n="cases_title">Elige un caso y sigue su recorrido</h2>
+          <p data-i18n="cases_intro">Cada vista separa resultado, arquitectura y evidencia. Los estados indican qué llegó a producción y qué quedó como diseño o MVP.</p>
+        </header>
+
+        <div class="case-explorer reveal">
+          <aside class="case-index" aria-label="Selector de casos">
+            <div class="case-progress-line">
+              <span data-i18n="cases_reviewed">Casos revisados</span>
+              <strong id="visited-count" aria-live="polite">1 / 7</strong>
+            </div>
+            <div class="case-tabs" id="case-tabs" role="tablist" aria-orientation="vertical">
+              <button class="case-tab active" type="button" role="tab" aria-selected="true" data-case="promotions">
+                <span>01</span><strong data-i18n="tab_promotions">Promociones</strong><small data-i18n="state_production">Producción</small>
+              </button>
+              <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="descriptions">
+                <span>02</span><strong data-i18n="tab_descriptions">Descripciones Web</strong><small data-i18n="state_cloud_job">Job cloud</small>
+              </button>
+              <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="cip">
+                <span>03</span><strong data-i18n="tab_cip">Consulta CIP</strong><small data-i18n="state_service">Servicio</small>
+              </button>
+              <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="whatsapp">
+                <span>04</span><strong data-i18n="tab_whatsapp">Métricas WhatsApp</strong><small data-i18n="state_mixed">Estado mixto</small>
+              </button>
+              <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="referrals">
+                <span>05</span><strong data-i18n="tab_referrals">Referidos</strong><small data-i18n="state_design">Diseño auditado</small>
+              </button>
+              <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="johalex">
+                <span>06</span><strong>JOHALEX</strong><small data-i18n="state_own_product">Producto propio</small>
+              </button>
+              <button class="case-tab" type="button" role="tab" aria-selected="false" data-case="cobroapp">
+                <span>07</span><strong>CobroApp</strong><small data-i18n="state_own_product">Producto propio</small>
+              </button>
+            </div>
+          </aside>
+
+          <article class="case-panel" id="case-panel" role="tabpanel" tabindex="0" aria-live="polite">
+            <div class="case-panel-head">
+              <div>
+                <span id="case-number">CASO 01 / PROMART</span>
+                <h3 id="case-title">Carga y validación de promociones</h3>
+              </div>
+              <span class="case-state" id="case-state">PRODUCCIÓN</span>
+            </div>
+
+            <p class="case-lede" id="case-lede">Portal y motor de reglas que revisa solicitudes antes de su carga comercial.</p>
+
+            <div class="case-outcome">
+              <span data-i18n="case_result">Resultado</span>
+              <strong id="case-outcome">3 horas → 2 minutos por lote diario</strong>
+              <p id="case-outcome-note">98.9% menos tiempo, con excepciones enviadas a revisión humana.</p>
+            </div>
+
+            <div class="case-block">
+              <span class="case-label" data-i18n="case_flow">Recorrido técnico</span>
+              <div class="flow-track" id="case-flow"></div>
+            </div>
+
+            <div class="case-grid" id="case-facts"></div>
+
+            <div class="evidence-row">
+              <div>
+                <span class="case-label" data-i18n="case_evidence">Evidencia disponible</span>
+                <div class="evidence-meter" id="evidence-meter" aria-label="Nivel de evidencia"></div>
+              </div>
+              <a class="case-link" id="case-link" href="#contacto" data-i18n="case_private">Código corporativo privado</a>
+            </div>
+
+            <div class="case-nav">
+              <button id="previous-case" type="button" aria-label="Caso anterior" title="Caso anterior">←</button>
+              <button id="next-case" type="button" aria-label="Caso siguiente" title="Caso siguiente">→</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="career-section" id="trayectoria">
+        <div class="section-shell">
+          <header class="section-heading light-heading reveal">
+            <div>
+              <span class="section-index">02</span>
+              <span class="section-kicker" data-i18n="career_kicker">Trayectoria</span>
+            </div>
+            <h2 data-i18n="career_title">Cambios de responsabilidad, no solo cargos</h2>
+          </header>
+
+          <div class="career-log reveal">
+            <article class="career-row">
+              <time>2024—HOY</time>
+              <div><strong>PROMART</strong><span data-i18n="career_promart_role">Especialista en Automatización RPA</span></div>
+              <p data-i18n="career_promart_text">De bots A360 a servicios Python/.NET en GCP, integraciones de IA, reglas comerciales y operación medida.</p>
+            </article>
+            <article class="career-row">
+              <time>2023—2024</time>
+              <div><strong>GLOBAL HITSS</strong><span data-i18n="career_hitss_role">Consultor de Automatización RPA</span></div>
+              <p data-i18n="career_hitss_text">Cuatro automatizaciones para Claro Perú, manejo de excepciones y levantamiento con usuarios.</p>
+            </article>
+            <article class="career-row">
+              <time>2022</time>
+              <div><strong>SOAPROS / MOVISTAR</strong><span data-i18n="career_soapros_role">Desarrollador de Software</span></div>
+              <p data-i18n="career_soapros_text">Node.js, TypeScript, facturación, seguimiento documental y colaboración mediante Git.</p>
+            </article>
+            <article class="career-row">
+              <time>2021</time>
+              <div><strong>SUNAT</strong><span data-i18n="career_sunat_role">Analista Programador, prácticas</span></div>
+              <p data-i18n="career_sunat_text">Macros VBA y reportes estadísticos para información institucional.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools-section section-shell" id="herramientas">
+        <header class="section-heading reveal">
+          <div>
+            <span class="section-index">03</span>
+            <span class="section-kicker" data-i18n="tools_kicker">Herramientas y práctica</span>
+          </div>
+          <h2 data-i18n="tools_title">Lo que puedo explicar con código abierto</h2>
+          <p data-i18n="tools_intro">La lista se limita a tecnologías usadas en repositorios, despliegues o documentación revisada.</p>
+        </header>
+
+        <div class="capability-ledger reveal">
+          <div class="capability-row">
+            <span>01 / AI</span>
+            <strong data-i18n="tool_ai_title">IA aplicada</strong>
+            <p data-i18n="tool_ai_list">OpenAI Responses API · Gemini Vision · prompts con salida controlada · parsing · validación · reintentos</p>
+            <small data-i18n="tool_ai_proof">Descripciones Web + Consulta CIP</small>
+          </div>
+          <div class="capability-row">
+            <span>02 / CODE</span>
+            <strong data-i18n="tool_code_title">Software</strong>
+            <p>Python 3.12 · FastAPI · Playwright · .NET 10 · Node.js · TypeScript · Next.js · React</p>
+            <small data-i18n="tool_code_proof">PROMART + productos propios</small>
+          </div>
+          <div class="capability-row">
+            <span>03 / CLOUD</span>
+            <strong data-i18n="tool_cloud_title">Nube y entrega</strong>
+            <p>Cloud Run · Pub/Sub · GCS · Docker · Azure DevOps · GitHub Actions · Secret Manager</p>
+            <small data-i18n="tool_cloud_proof">Services, jobs y CI/CD</small>
+          </div>
+          <div class="capability-row">
+            <span>04 / DATA</span>
+            <strong data-i18n="tool_data_title">Datos e integraciones</strong>
+            <p>Oracle · SQL Server · PostgreSQL · Microsoft Graph · SharePoint · Outlook · REST</p>
+            <small data-i18n="tool_data_proof">Retail, telecom y sistemas propios</small>
+          </div>
+          <div class="capability-row">
+            <span>05 / OPS</span>
+            <strong data-i18n="tool_ops_title">Automatización y operación</strong>
+            <p>Automation Anywhere A360 · Power Automate · PDD/SDD · logs · excepciones · revisión humana</p>
+            <small data-i18n="tool_ops_proof">Certificación A360 Master</small>
+          </div>
+        </div>
+
+        <div class="boundary-note reveal">
+          <span data-i18n="boundary_label">Límite declarado</span>
+          <p data-i18n="boundary_text">Aún no presento RAG, fine-tuning, Deep Learning ni una arquitectura multiagente como experiencia productiva. Mi evidencia actual está en la ingeniería que conecta modelos con servicios, datos y operación.</p>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contacto">
+        <div class="section-shell contact-grid reveal">
+          <div>
+            <span class="section-index">04</span>
+            <span class="section-kicker" data-i18n="contact_kicker">Contacto</span>
+            <h2 data-i18n="contact_title">Hablemos del sistema que necesita llegar a producción.</h2>
+          </div>
+          <div class="contact-actions">
+            <a class="email-link" href="mailto:alexandermelendezrios@gmail.com">alexandermelendezrios@gmail.com <span aria-hidden="true">↗</span></a>
+            <div class="contact-meta">
+              <span>Lima, Perú · GMT-5</span>
+              <a href="tel:+51920438564">+51 920 438 564</a>
+            </div>
+            <div class="download-row">
+              <a href="pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-ES.pdf" target="_blank" rel="noopener" data-i18n="download_es">CV español</a>
+              <a href="pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-EN.pdf" target="_blank" rel="noopener" data-i18n="download_en">CV inglés</a>
+              <a href="https://github.com/xanderMMR2" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Alexander Meléndez / 2026</span>
+      <span data-i18n="footer_line">Python · IA aplicada · automatización · nube</span>
     </footer>
 
-    <script src="script.js?v=20260613-tools-spacing-fix"></script>
+    <noscript>Este portafolio necesita JavaScript para cambiar de idioma y explorar los casos. Los enlaces de contacto y CV siguen disponibles.</noscript>
   </body>
 </html>

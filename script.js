@@ -1,378 +1,885 @@
-const translations = {
-  en: {
-    brand_label: "Alexander Melendez",
-    nav_impact: "Impact",
-    nav_exp: "Work",
-    nav_skills: "Tools",
-    nav_contact: "Contact",
-    nav_hire: "Email",
-    hero_available: "Remote · GMT-5 · open to US teams",
-    hero_title: "AI Automation Specialist · RPA, OpenAI API and cloud systems in production",
-    hero_sub: "Computer Science graduate in Lima. I build and validate production automation: A360 bots, REST integrations, Oracle queries, .NET services and jobs on GCP Cloud Run, and OpenAI API workflows. <strong>13 shipped automations with ROI tracked.</strong>",
-    hero_cta_impact: "Read the record",
-    hero_cta_cv: "Download CV",
-    hero_cta_linkedin: "LinkedIn",
-    bento_header: "Verified Impact",
-    bento_live: "Verified",
-    bento_label: "Tracked business impact",
-    ledger_source_label: "Source",
-    ledger_source_value: "ROI workbook + PDD/SDD",
-    ledger_systems_label: "Systems",
-    ledger_systems_value: "A360 · Oracle · GCP · OpenAI",
-    ledger_delivery_label: "Delivery",
-    ledger_delivery_value: "9 live flows · 17 documented",
-    ledger_focus_label: "Focus",
-    ledger_focus_value: "AI automation for ops teams",
-    impact_tag: "Impact",
-    impact_title: "Measured production impact",
-    impact_sub: "Metrics based on deployed automation, ROI calculations, and PDD/SDD documentation.",
-    m1_label: "Total Business Impact Managed",
-    m1_detail: "Direct savings plus risk mitigation",
-    m2_label: "Accumulated Direct Savings",
-    m2_detail: "Gross operational savings from 9 production bots",
-    m3_label: "Financial Risk Mitigated",
-    m3_detail: "SUNAFIL exposure plus promotion configuration risk",
-    m4_label: "Hours Freed per Month",
-    m4_detail: "Monthly operational capacity released",
-    m5_label: "Career Automations Delivered",
-    m5_detail: "Retail and telecom automation work",
-    m6_label: "Cloud Job Delivery",
-    m6_detail: "GCP Cloud Run plus .NET delivery cycle",
-    exp_tag: "Work History",
-    exp_title: "Where the work happened",
-    exp_p_role: "AI Automation Specialist",
-    exp_p_period: "Jul 2024 - Present",
-    exp_p_a1: "<strong>Built and deployed a promotions portal and rules engine with AI agents</strong> on .NET 10 and GCP, cutting a daily batch from <strong>3 hours to 2 minutes</strong>.",
-    exp_p_a2: "<strong>Delivered a purchase-order generation job</strong> on GCP Cloud Run and .NET in <strong>2.5 weeks</strong> using Azure DevOps CI/CD.",
-    exp_p_a3: "<strong>Integrated OpenAI API with A360</strong> for web content and SEO workflows, freeing <strong>1,800+ hours</strong> of manual writing work.",
-    exp_p_a4: "<strong>Mitigated $151,842 USD in SUNAFIL exposure</strong> by systematizing overtime controls across Kronos and Sharepoint.",
-    exp_p_a5: "<strong>Documented 17 business flows</strong> in PDD/SDD format, with 9 live automations prioritized for production.",
-    exp_p_a6: "Configured A360 infrastructure and virtual machines for concurrent production bots, including SAP iRPA monitoring.",
-    exp_g_company: "GLOBAL HITSS (Telecommunications)",
-    exp_g_role: "RPA Automation Consultant",
-    exp_g_period: "Apr 2023 - Jun 2024",
-    exp_g_a1: "<strong>Developed 4 transactional automations</strong> for Claro Peru to activate and deactivate cloud storage plans at volume.",
-    exp_g_a2: "<strong>Built retry and exception handling patterns</strong> for bots running against legacy systems with frequent UI failures.",
-    exp_g_a3: "<strong>Wrote PDD/SDD documentation</strong> and led process discovery sessions with end users.",
-    exp_s_role: "Software Developer",
-    exp_s_period: "May 2022 - Dec 2022",
-    exp_s_a1: "<strong>Built a document tracking system</strong> for Movistar using Node.js and TypeScript under Scrum.",
-    exp_s_a2: "<strong>Built electronic invoicing modules</strong> with Hapi.js and SQL for SUNAT compliance.",
-    exp_m_role: "Software Developer",
-    exp_m_period: "Mar 2022 - Jul 2022",
-    exp_m_a1: "Designed entity-relationship diagrams and developed billing-system backend and frontend modules.",
-    proj_tag: "Case Files",
-    proj_title: "Selected delivery notes",
-    proj1_badge: "3 h to 2 min",
-    proj1_title: "Promotions Validation and Upload",
-    proj1_desc: "Built and deployed an AI-agent-assisted .NET 10 portal and rules engine on Cloud Run. It validates prices, stock, margins, active promotions, combos, contributions, and signage before producing the final report.",
-    proj2_badge: "Cloud job",
-    proj2_title: "PO Generation - GCP Cloud Run",
-    proj2_desc: "Moved purchase-order generation from RPA into a Cloud Run Job with .NET, Azure DevOps CI/CD, and Microsoft Graph API integration. Shipped in <strong>2.5 weeks</strong>.",
-    proj3_badge: "OpenAI API",
-    proj3_title: "Web Descriptions and SEO",
-    proj3_desc: "Integrated OpenAI API through REST actions in A360 to generate product descriptions and SEO text, freeing <strong>1,800+ hours</strong> of manual writing work.",
-    proj4_badge: "Compliance",
-    proj4_title: "Overtime Control - SUNAFIL",
-    proj4_desc: "Systematized overtime tracking across Kronos, Excel, and Sharepoint, mitigating ~$151,842 USD in regulatory exposure.",
-    proj5_badge: "DB access",
-    proj5_title: "Oracle DB Direct Queries",
-    proj5_desc: "Replaced UI-based extraction with direct Oracle DB queries and Python scripts, reducing failure points caused by screen changes.",
-    proj6_title: "Document Tracking System",
-    proj6_desc: "Built a document tracking system for Movistar using Node.js and TypeScript with Git-based collaboration.",
-    proj7_badge: "Personal project",
-    proj7_title: "CobroApp - Installment Sales SaaS",
-    proj7_desc: "Built and deployed a web SaaS for installment payment management: <strong>React 18 + Node.js + PostgreSQL</strong> on <strong>Cloudflare Pages + GCP Cloud Run</strong>, with CI/CD and automated backups.",
-    skills_tag: "Tools",
-    skills_title: "Technical tools used in production",
-    skills_g1_title: "AI and Orchestration",
-    skills_g1_s1: "OpenAI API integration",
-    skills_g1_s2: "LLM workflow design",
-    skills_g1_s3: "AI-assisted development",
-    skills_g1_s4: "Business rule validation",
-    skills_g2_title: "RPA and Automation",
-    skills_g2_s1: "Automation Anywhere A360 (Master)",
-    skills_g2_s2: "PDD/SDD documentation",
-    skills_g2_s3: "Retry and exception handling",
-    skills_g2_s4: "SAP iRPA monitoring",
-    skills_g3_title: "Cloud and DevOps",
-    skills_g3_s1: "GCP Cloud Run services and jobs",
-    skills_g3_s2: "Azure DevOps CI/CD",
-    skills_g3_s3: "Microsoft Graph API",
-    skills_g3_s4: "GitHub Actions",
-    skills_g4_title: "Engineering",
-    skills_g4_s1: "Python scripting",
-    skills_g4_s2: "SQL and Oracle DB",
-    skills_g4_s3: "Node.js and TypeScript",
-    skills_g4_s4: ".NET delivery with AI assistance",
-    skills_g5_title: "Enterprise Systems",
-    skills_g6_title: "Process Work",
-    skills_g6_s1: "Process discovery",
-    skills_g6_s2: "Requirements writing",
-    skills_g6_s3: "Scrum delivery",
-    skills_g6_s4: "17 PDD/SDD documents",
-    certs_tag: "Credentials",
-    certs_title: "Education and certifications",
-    cert2_title: "Advanced Automation Certification",
-    cert3_title: "Essentials Automation Certification",
-    cert4_title: "Professional Degree in Computer Science",
-    contact_tag: "Contact",
-    contact_title: "Open a hiring conversation",
-    contact_sub: "Best use: AI automation, RPA modernization, API integrations, and cloud jobs for operations teams.",
-    contact_loc_label: "Location",
-    contact_loc_val: "Lima, Peru · Remote",
-    contact_phone_label: "Phone / WhatsApp",
-    footer_title: "AI Automation Specialist",
-    footer_sub: "AI automation, RPA, and cloud integrations."
-  },
-  es: {
-    brand_label: "Alexander Meléndez",
-    nav_impact: "Impacto",
-    nav_exp: "Trabajo",
-    nav_skills: "Herramientas",
-    nav_contact: "Contacto",
-    nav_hire: "Email",
-    hero_available: "Remoto · GMT-5 · abierto a equipos US",
-    hero_title: "Especialista en Automatización con IA · RPA, OpenAI API y sistemas cloud en producción",
-    hero_sub: "Licenciado en Ciencias de la Computación en Lima. Construyo y valido automatización en producción: bots A360, integraciones REST, consultas Oracle, servicios y jobs .NET en GCP Cloud Run y flujos con OpenAI API. <strong>13 automatizaciones entregadas con ROI trazado.</strong>",
-    hero_cta_impact: "Leer el registro",
-    hero_cta_cv: "Descargar CV",
-    hero_cta_linkedin: "LinkedIn",
-    bento_header: "Impacto Verificado",
-    bento_live: "Verificado",
-    bento_label: "Impacto de negocio trazado",
-    ledger_source_label: "Fuente",
-    ledger_source_value: "Hoja ROI + PDD/SDD",
-    ledger_systems_label: "Sistemas",
-    ledger_systems_value: "A360 · Oracle · GCP · OpenAI",
-    ledger_delivery_label: "Entrega",
-    ledger_delivery_value: "9 flujos vivos · 17 documentados",
-    ledger_focus_label: "Foco",
-    ledger_focus_value: "Automatización con IA para operaciones",
-    impact_tag: "Impacto",
-    impact_title: "Impacto medido en producción",
-    impact_sub: "Métricas basadas en automatizaciones desplegadas, ROI calculado y documentación PDD/SDD.",
-    m1_label: "Impacto de Negocio Total Gestionado",
-    m1_detail: "Ahorro directo más mitigación de riesgos",
-    m2_label: "Ahorro Directo Acumulado",
-    m2_detail: "Ahorro operativo bruto de 9 bots en producción",
-    m3_label: "Riesgo Financiero Mitigado",
-    m3_detail: "Exposición SUNAFIL más riesgo en promociones",
-    m4_label: "Horas Liberadas por Mes",
-    m4_detail: "Capacidad operativa mensual liberada",
-    m5_label: "Automatizaciones Entregadas",
-    m5_detail: "Trabajo de automatización en retail y telecom",
-    m6_label: "Entrega de Job Cloud",
-    m6_detail: "Ciclo de entrega con GCP Cloud Run y .NET",
-    exp_tag: "Historial",
-    exp_title: "Dónde ocurrió el trabajo",
-    exp_p_role: "Especialista en Automatización con IA",
-    exp_p_period: "Jul 2024 - Presente",
-    exp_p_a1: "<strong>Construí y puse en producción con agentes de IA un portal y motor de reglas para promociones</strong> en .NET 10 y GCP, reduciendo un lote diario de <strong>3 horas a 2 minutos</strong>.",
-    exp_p_a2: "<strong>Entregué un job de generación de órdenes de compra</strong> en GCP Cloud Run y .NET en <strong>2.5 semanas</strong> usando CI/CD en Azure DevOps.",
-    exp_p_a3: "<strong>Integré OpenAI API con A360</strong> para flujos de contenido web y SEO, liberando <strong>1,800+ horas</strong> de redacción manual.",
-    exp_p_a4: "<strong>Mitigué $151,842 USD en exposición SUNAFIL</strong> sistematizando controles de horas extra en Kronos y Sharepoint.",
-    exp_p_a5: "<strong>Documenté 17 flujos de negocio</strong> en formato PDD/SDD, con 9 automatizaciones priorizadas en producción.",
-    exp_p_a6: "Configuré infraestructura A360 y máquinas virtuales para bots concurrentes en producción, incluyendo monitoreo de SAP iRPA.",
-    exp_g_company: "GLOBAL HITSS (Telecomunicaciones)",
-    exp_g_role: "Consultor de Automatización RPA",
-    exp_g_period: "Abr 2023 - Jun 2024",
-    exp_g_a1: "<strong>Desarrollé 4 automatizaciones transaccionales</strong> para Claro Perú para activar y desactivar planes cloud a volumen.",
-    exp_g_a2: "<strong>Construí patrones de reintento y manejo de excepciones</strong> para bots ejecutados sobre sistemas legados con fallas frecuentes de interfaz.",
-    exp_g_a3: "<strong>Redacté documentación PDD/SDD</strong> y llevé sesiones de descubrimiento de proceso con usuarios finales.",
-    exp_s_role: "Desarrollador de Software",
-    exp_s_period: "May 2022 - Dic 2022",
-    exp_s_a1: "<strong>Construí un sistema de seguimiento de documentos</strong> para Movistar usando Node.js y TypeScript bajo Scrum.",
-    exp_s_a2: "<strong>Construí módulos de facturación electrónica</strong> con Hapi.js y SQL para cumplimiento SUNAT.",
-    exp_m_role: "Desarrollador de Software",
-    exp_m_period: "Mar 2022 - Jul 2022",
-    exp_m_a1: "Diseñé diagramas entidad-relación y desarrollé módulos backend y frontend para sistemas de facturación.",
-    proj_tag: "Casos",
-    proj_title: "Notas de entregas seleccionadas",
-    proj1_badge: "3 h a 2 min",
-    proj1_title: "Validación y Carga de Promociones",
-    proj1_desc: "Construí y puse en producción con agentes de IA un portal y motor de reglas en .NET 10 sobre Cloud Run. Valida precios, stock, márgenes, promociones vigentes, combos, aportes y cartelería antes de generar el reporte final.",
-    proj2_badge: "Job cloud",
-    proj2_title: "Generación de OCs - GCP Cloud Run",
-    proj2_desc: "Moví la generación de órdenes de compra desde RPA hacia un Job de Cloud Run con .NET, CI/CD en Azure DevOps e integración con Microsoft Graph API. Entregado en <strong>2.5 semanas</strong>.",
-    proj3_badge: "OpenAI API",
-    proj3_title: "Descripciones Web y SEO",
-    proj3_desc: "Integré OpenAI API mediante acciones REST en A360 para generar descripciones de producto y texto SEO, liberando <strong>1,800+ horas</strong> de redacción manual.",
-    proj4_badge: "Cumplimiento",
-    proj4_title: "Control de Horas Extra - SUNAFIL",
-    proj4_desc: "Sistematicé el control de horas extra en Kronos, Excel y Sharepoint, mitigando ~$151,842 USD en exposición regulatoria.",
-    proj5_badge: "Acceso BD",
-    proj5_title: "Consultas Directas a Oracle DB",
-    proj5_desc: "Reemplacé extracción vía interfaz por consultas directas a Oracle DB y scripts Python, reduciendo puntos de falla por cambios de pantalla.",
-    proj6_title: "Sistema de Seguimiento de Documentos",
-    proj6_desc: "Construí un sistema de seguimiento de documentos para Movistar usando Node.js y TypeScript con colaboración vía Git.",
-    proj7_badge: "Proyecto personal",
-    proj7_title: "CobroApp - SaaS de Ventas en Cuotas",
-    proj7_desc: "Construí y desplegué un SaaS web para gestión de pagos en cuotas: <strong>React 18 + Node.js + PostgreSQL</strong> en <strong>Cloudflare Pages + GCP Cloud Run</strong>, con CI/CD y backups automáticos.",
-    skills_tag: "Herramientas",
-    skills_title: "Herramientas técnicas usadas en producción",
-    skills_g1_title: "IA y Orquestación",
-    skills_g1_s1: "Integración de OpenAI API",
-    skills_g1_s2: "Diseño de flujos con LLM",
-    skills_g1_s3: "Desarrollo asistido por IA",
-    skills_g1_s4: "Validación de reglas de negocio",
-    skills_g2_title: "RPA y Automatización",
-    skills_g2_s1: "Automation Anywhere A360 (Master)",
-    skills_g2_s2: "Documentación PDD/SDD",
-    skills_g2_s3: "Reintentos y manejo de excepciones",
-    skills_g2_s4: "Monitoreo SAP iRPA",
-    skills_g3_title: "Cloud y DevOps",
-    skills_g3_s1: "Servicios y jobs en GCP Cloud Run",
-    skills_g3_s2: "Azure DevOps CI/CD",
-    skills_g3_s3: "Microsoft Graph API",
-    skills_g3_s4: "GitHub Actions",
-    skills_g4_title: "Ingeniería",
-    skills_g4_s1: "Scripting en Python",
-    skills_g4_s2: "SQL y Oracle DB",
-    skills_g4_s3: "Node.js y TypeScript",
-    skills_g4_s4: "Entrega .NET asistida por IA",
-    skills_g5_title: "Sistemas Empresariales",
-    skills_g6_title: "Trabajo de Procesos",
-    skills_g6_s1: "Descubrimiento de procesos",
-    skills_g6_s2: "Redacción de requerimientos",
-    skills_g6_s3: "Entrega Scrum",
-    skills_g6_s4: "17 documentos PDD/SDD",
-    certs_tag: "Credenciales",
-    certs_title: "Educación y certificaciones",
-    cert2_title: "Certificación de Automatización Avanzada",
-    cert3_title: "Certificación Essentials Automation",
-    cert4_title: "Licenciado en Ciencias de la Computación",
-    contact_tag: "Contacto",
-    contact_title: "Abrir una conversación laboral",
-    contact_sub: "Mejor uso: automatización con IA, modernización RPA, integraciones API y jobs cloud para equipos operativos.",
-    contact_loc_label: "Ubicación",
-    contact_loc_val: "Lima, Perú · Remoto",
-    contact_phone_label: "Teléfono / WhatsApp",
-    footer_title: "Especialista en Automatización con IA",
-    footer_sub: "Automatización con IA, RPA e integraciones cloud."
-  }
-};
-
-const langToggleBtn = document.getElementById("lang-toggle");
-const langText = document.getElementById("lang-text");
-
-function setLanguage(lang) {
-  const selected = translations[lang] ? lang : "en";
-  localStorage.setItem("lang", selected);
-  document.documentElement.lang = selected;
-
-  if (langText) {
-    langText.textContent = selected === "en" ? "ES" : "EN";
-  }
-
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[selected][key]) {
-      el.innerHTML = translations[selected][key];
+(() => {
+  const translations = {
+    es: {
+      page_title: "Alexander Meléndez | Ingeniería de Automatización con IA",
+      page_description: "Sistemas de automatización e IA desplegados por Alexander Meléndez: Python 3.12, OpenAI API, Gemini Vision, .NET y GCP Cloud Run.",
+      skip: "Saltar al contenido",
+      nav_cases: "Casos",
+      nav_career: "Trayectoria",
+      nav_tools: "Herramientas",
+      nav_contact: "Contacto",
+      nav_email: "Escribir",
+      hero_status: "Lima · disponible para conversar",
+      hero_role: "Ingeniero de automatización con IA",
+      hero_summary: "Convierto reglas operativas en servicios que llegan a producción. Trabajo con Python 3.12, APIs de modelos, .NET y GCP; mantengo revisión humana donde una decisión necesita contexto.",
+      hero_cases: "Explorar sistemas",
+      hero_cv: "CV en PDF",
+      map_kicker: "Sistema activo",
+      map_title: "Carga de promociones",
+      map_state: "PRODUCCIÓN",
+      map_before: "ANTES",
+      map_after: "AHORA",
+      map_legend_input: "Entrada",
+      map_legend_service: "Servicio",
+      map_legend_review: "Revisión humana",
+      signal_title: "Resultados medidos",
+      signal_source: "ROI y documentación operativa",
+      metric_impact: "impacto gestionado",
+      metric_hours: "horas liberadas por mes",
+      metric_delivery: "automatizaciones entregadas",
+      metric_cycle: "menos tiempo por lote",
+      cases_kicker: "Sistemas seleccionados",
+      cases_title: "Elige un caso y sigue su recorrido",
+      cases_intro: "Cada vista separa resultado, arquitectura y evidencia. Los estados indican qué llegó a producción y qué quedó como diseño o MVP.",
+      cases_reviewed: "Casos revisados",
+      tab_promotions: "Promociones",
+      tab_descriptions: "Descripciones Web",
+      tab_cip: "Consulta CIP",
+      tab_whatsapp: "Métricas WhatsApp",
+      tab_referrals: "Referidos",
+      state_production: "Producción",
+      state_cloud_job: "Job cloud",
+      state_service: "Servicio",
+      state_mixed: "Estado mixto",
+      state_design: "Diseño auditado",
+      state_own_product: "Producto propio",
+      case_result: "Resultado",
+      case_flow: "Recorrido técnico",
+      case_evidence: "Evidencia disponible",
+      case_private: "Código corporativo privado",
+      career_kicker: "Trayectoria",
+      career_title: "Cambios de responsabilidad, no solo cargos",
+      career_promart_role: "Especialista en Automatización RPA",
+      career_promart_text: "De bots A360 a servicios Python/.NET en GCP, integraciones de IA, reglas comerciales y operación medida.",
+      career_hitss_role: "Consultor de Automatización RPA",
+      career_hitss_text: "Cuatro automatizaciones para Claro Perú, manejo de excepciones y levantamiento con usuarios.",
+      career_soapros_role: "Desarrollador de Software",
+      career_soapros_text: "Node.js, TypeScript, facturación, seguimiento documental y colaboración mediante Git.",
+      career_sunat_role: "Analista Programador, prácticas",
+      career_sunat_text: "Macros VBA y reportes estadísticos para información institucional.",
+      tools_kicker: "Herramientas y práctica",
+      tools_title: "Lo que puedo explicar con código abierto",
+      tools_intro: "La lista se limita a tecnologías usadas en repositorios, despliegues o documentación revisada.",
+      tool_ai_title: "IA aplicada",
+      tool_ai_list: "OpenAI Responses API · Gemini Vision · prompts con salida controlada · parsing · validación · reintentos",
+      tool_ai_proof: "Descripciones Web + Consulta CIP",
+      tool_code_title: "Software",
+      tool_code_proof: "PROMART + productos propios",
+      tool_cloud_title: "Nube y entrega",
+      tool_cloud_proof: "Services, jobs y CI/CD",
+      tool_data_title: "Datos e integraciones",
+      tool_data_proof: "Retail, telecom y sistemas propios",
+      tool_ops_title: "Automatización y operación",
+      tool_ops_proof: "Certificación A360 Master",
+      boundary_label: "Límite declarado",
+      boundary_text: "Aún no presento RAG, fine-tuning, Deep Learning ni una arquitectura multiagente como experiencia productiva. Mi evidencia actual está en la ingeniería que conecta modelos con servicios, datos y operación.",
+      contact_kicker: "Contacto",
+      contact_title: "Hablemos del sistema que necesita llegar a producción.",
+      download_es: "CV español",
+      download_en: "CV inglés",
+      footer_line: "Python · IA aplicada · automatización · nube",
+      previous_case: "Caso anterior",
+      next_case: "Caso siguiente",
+      menu_open: "Abrir menú",
+      menu_close: "Cerrar menú",
+      theme_label: "Cambiar tema",
+      lang_label: "Cambiar a inglés",
+      public_repo: "Ver repositorio ↗",
+      private_code: "Código corporativo privado"
+    },
+    en: {
+      page_title: "Alexander Meléndez | AI Automation Engineering",
+      page_description: "Automation and AI systems deployed by Alexander Meléndez: Python 3.12, OpenAI API, Gemini Vision, .NET, and GCP Cloud Run.",
+      skip: "Skip to content",
+      nav_cases: "Cases",
+      nav_career: "Career",
+      nav_tools: "Tools",
+      nav_contact: "Contact",
+      nav_email: "Email",
+      hero_status: "Lima · open to conversations",
+      hero_role: "AI automation engineer",
+      hero_summary: "I turn operational rules into services that reach production. I work with Python 3.12, model APIs, .NET, and GCP, keeping human review where decisions need context.",
+      hero_cases: "Explore systems",
+      hero_cv: "CV in PDF",
+      map_kicker: "Active system",
+      map_title: "Promotions processing",
+      map_state: "PRODUCTION",
+      map_before: "BEFORE",
+      map_after: "NOW",
+      map_legend_input: "Input",
+      map_legend_service: "Service",
+      map_legend_review: "Human review",
+      signal_title: "Measured outcomes",
+      signal_source: "ROI and operational documentation",
+      metric_impact: "managed business impact",
+      metric_hours: "hours released per month",
+      metric_delivery: "automations delivered",
+      metric_cycle: "less time per batch",
+      cases_kicker: "Selected systems",
+      cases_title: "Choose a case and follow its path",
+      cases_intro: "Each view separates outcome, architecture, and evidence. Status labels show what reached production and what remained a design or MVP.",
+      cases_reviewed: "Cases reviewed",
+      tab_promotions: "Promotions",
+      tab_descriptions: "Web Descriptions",
+      tab_cip: "CIP Lookup",
+      tab_whatsapp: "WhatsApp Metrics",
+      tab_referrals: "Referrals",
+      state_production: "Production",
+      state_cloud_job: "Cloud job",
+      state_service: "Service",
+      state_mixed: "Mixed status",
+      state_design: "Audited design",
+      state_own_product: "Own product",
+      case_result: "Outcome",
+      case_flow: "Technical path",
+      case_evidence: "Available evidence",
+      case_private: "Private company code",
+      career_kicker: "Career",
+      career_title: "Changes in responsibility, not just titles",
+      career_promart_role: "RPA Automation Specialist",
+      career_promart_text: "From A360 bots to Python/.NET services on GCP, AI integrations, commercial rules, and measured operations.",
+      career_hitss_role: "RPA Automation Consultant",
+      career_hitss_text: "Four automations for Claro Peru, exception handling, and requirements gathering with users.",
+      career_soapros_role: "Software Developer",
+      career_soapros_text: "Node.js, TypeScript, invoicing, document tracking, and Git-based collaboration.",
+      career_sunat_role: "Programmer Analyst Intern",
+      career_sunat_text: "VBA macros and statistical reports for institutional information.",
+      tools_kicker: "Tools and practice",
+      tools_title: "What I can explain from working code",
+      tools_intro: "This list is limited to technologies used in repositories, deployments, or reviewed documentation.",
+      tool_ai_title: "Applied AI",
+      tool_ai_list: "OpenAI Responses API · Gemini Vision · controlled-output prompts · parsing · validation · retries",
+      tool_ai_proof: "Web Descriptions + CIP Lookup",
+      tool_code_title: "Software",
+      tool_code_proof: "PROMART + own products",
+      tool_cloud_title: "Cloud and delivery",
+      tool_cloud_proof: "Services, jobs, and CI/CD",
+      tool_data_title: "Data and integrations",
+      tool_data_proof: "Retail, telecom, and own systems",
+      tool_ops_title: "Automation and operations",
+      tool_ops_proof: "A360 Master certification",
+      boundary_label: "Declared boundary",
+      boundary_text: "I do not yet present RAG, fine-tuning, Deep Learning, or a multi-agent architecture as production experience. My current evidence is in the engineering that connects models with services, data, and operations.",
+      contact_kicker: "Contact",
+      contact_title: "Let's discuss the system that needs to reach production.",
+      download_es: "Spanish CV",
+      download_en: "English CV",
+      footer_line: "Python · applied AI · automation · cloud",
+      previous_case: "Previous case",
+      next_case: "Next case",
+      menu_open: "Open menu",
+      menu_close: "Close menu",
+      theme_label: "Change theme",
+      lang_label: "Cambiar a español",
+      public_repo: "View repository ↗",
+      private_code: "Private company code"
     }
-  });
+  };
 
-  const cvLink = document.getElementById("cv-download-link");
-  if (cvLink) {
-    cvLink.href =
-      selected === "en"
-        ? "pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-EN.pdf"
-        : "pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-ES.pdf";
+  const caseRecords = {
+    promotions: {
+      evidence: 5,
+      url: "",
+      es: {
+        number: "CASO 01 / PROMART",
+        state: "PRODUCCIÓN",
+        title: "Carga y validación de promociones",
+        lede: "Portal y motor de reglas que revisa solicitudes antes de su carga comercial.",
+        outcome: "3 horas → 2 minutos por lote diario",
+        note: "98.9% menos tiempo, con excepciones enviadas a revisión humana.",
+        flow: ["Excel", "Portal .NET", "Pub/Sub + GCS", "Oracle + SQL", "Revisión + reporte"],
+        facts: [
+          ["Periodo", "Abril-julio de 2026"],
+          ["Capacidad", "Hasta 10 archivos y 5,000 filas por lote"],
+          ["Validaciones", "Precios, stock, márgenes, vigencias, combos, aportes y cartelería"],
+          ["Trazabilidad", "Estado en Oracle, salida Excel/JSON y seguimiento por SSE"]
+        ]
+      },
+      en: {
+        number: "CASE 01 / PROMART",
+        state: "PRODUCTION",
+        title: "Promotions validation and processing",
+        lede: "A portal and rules engine that checks promotion requests before commercial loading.",
+        outcome: "3 hours → 2 minutes per daily batch",
+        note: "98.9% less time, with exceptions routed to human review.",
+        flow: ["Excel", ".NET portal", "Pub/Sub + GCS", "Oracle + SQL", "Review + report"],
+        facts: [
+          ["Period", "April-July 2026"],
+          ["Capacity", "Up to 10 files and 5,000 rows per batch"],
+          ["Checks", "Prices, stock, margins, active promotions, bundles, contributions, and signage"],
+          ["Traceability", "Oracle status, Excel/JSON output, and SSE progress"]
+        ]
+      }
+    },
+    descriptions: {
+      evidence: 4,
+      url: "",
+      es: {
+        number: "CASO 02 / PROMART",
+        state: "JOB CLOUD",
+        title: "Descripciones Web: de A360 a Python",
+        lede: "Migración de un bot de Automation Anywhere a un job que procesa catálogos con OpenAI API.",
+        outcome: "Python 3.12 + OpenAI API + Cloud Run Job",
+        note: "La migración tiene código, pipeline y configuración productiva; no se atribuye una cifra de ahorro.",
+        flow: ["SharePoint", "Validar Excel", "OpenAI API", "Validar salida", "Publicar + notificar"],
+        facts: [
+          ["Procesamiento", "Cinco workers por defecto y reintentos por SKU"],
+          ["Control de salida", "Parser de nombre, descripción y HTML"],
+          ["Integración", "Microsoft Graph para archivos y correo"],
+          ["Entrega", "Docker y Azure DevOps hacia el proyecto productivo de GCP"]
+        ]
+      },
+      en: {
+        number: "CASE 02 / PROMART",
+        state: "CLOUD JOB",
+        title: "Web Descriptions: from A360 to Python",
+        lede: "Migration of an Automation Anywhere bot into a job that processes catalog data with OpenAI API.",
+        outcome: "Python 3.12 + OpenAI API + Cloud Run Job",
+        note: "The migration has code, pipeline, and production configuration; no savings figure is claimed.",
+        flow: ["SharePoint", "Validate Excel", "OpenAI API", "Validate output", "Upload + notify"],
+        facts: [
+          ["Processing", "Five workers by default and per-SKU retries"],
+          ["Output control", "Parser for name, description, and HTML"],
+          ["Integration", "Microsoft Graph for files and email"],
+          ["Delivery", "Docker and Azure DevOps into the production GCP project"]
+        ]
+      }
+    },
+    cip: {
+      evidence: 4,
+      url: "",
+      es: {
+        number: "CASO 03 / PROMART",
+        state: "SERVICIO CLOUD",
+        title: "Consulta CIP con Gemini Vision",
+        lede: "API para consultar el registro CIP mediante navegador automatizado y resolución visual del captcha.",
+        outcome: "FastAPI + Playwright + Gemini Vision",
+        note: "Servicio protegido con API key, límites de concurrencia y hasta tres intentos por captcha.",
+        flow: ["POST /consultar", "Playwright", "Captura captcha", "Gemini Vision", "Respuesta tipada"],
+        facts: [
+          ["Runtime", "Python 3.12 y Chromium en Docker"],
+          ["Resiliencia", "Secuencia de modelos ante cuota o permisos"],
+          ["Aislamiento", "Contexto de navegador independiente por solicitud"],
+          ["Entrega", "Azure DevOps y Cloud Run en proyecto productivo"]
+        ]
+      },
+      en: {
+        number: "CASE 03 / PROMART",
+        state: "CLOUD SERVICE",
+        title: "CIP Lookup with Gemini Vision",
+        lede: "API for querying the CIP registry through browser automation and visual captcha resolution.",
+        outcome: "FastAPI + Playwright + Gemini Vision",
+        note: "API-key protection, concurrency limits, and up to three attempts per captcha.",
+        flow: ["POST /consult", "Playwright", "Capture captcha", "Gemini Vision", "Typed response"],
+        facts: [
+          ["Runtime", "Python 3.12 and Chromium in Docker"],
+          ["Resilience", "Model sequence for quota or permission errors"],
+          ["Isolation", "Independent browser context per request"],
+          ["Delivery", "Azure DevOps and Cloud Run in a production project"]
+        ]
+      }
+    },
+    whatsapp: {
+      evidence: 3,
+      url: "",
+      es: {
+        number: "CASO 04 / PROMART",
+        state: "ESTADO MIXTO",
+        title: "Métricas de comunicaciones en WhatsApp",
+        lede: "Dos jobs Node.js que recogen métricas desde WhatsApp Web y publican archivos en SharePoint.",
+        outcome: "1,807 filas consolidadas en junio",
+        note: "Tiendas quedó operativo en VM; Central dependía del historial disponible en la sesión de WhatsApp Web.",
+        flow: ["WhatsApp Web", "Node.js", "ExcelJS", "Microsoft Graph", "SharePoint"],
+        facts: [
+          ["Protección de datos", "Conserva vistas previas cuando una lectura nueva devuelve cero"],
+          ["Programación", "Tiendas 07:00 y Central 09:00 en Windows"],
+          ["Recuperación", "Caché local, reintentos y checkpoints por grupo"],
+          ["Límite", "Depende de la interfaz no oficial de WhatsApp Web"]
+        ]
+      },
+      en: {
+        number: "CASE 04 / PROMART",
+        state: "MIXED STATUS",
+        title: "WhatsApp communication metrics",
+        lede: "Two Node.js jobs that collect metrics from WhatsApp Web and publish files to SharePoint.",
+        outcome: "1,807 rows consolidated in June",
+        note: "Stores ran on a VM; Central depended on message history available to the WhatsApp Web session.",
+        flow: ["WhatsApp Web", "Node.js", "ExcelJS", "Microsoft Graph", "SharePoint"],
+        facts: [
+          ["Data protection", "Keeps previous views when a new reading returns zero"],
+          ["Schedule", "Stores at 07:00 and Central at 09:00 on Windows"],
+          ["Recovery", "Local cache, retries, and per-group checkpoints"],
+          ["Boundary", "Depends on the unofficial WhatsApp Web interface"]
+        ]
+      }
+    },
+    referrals: {
+      evidence: 3,
+      url: "",
+      es: {
+        number: "CASO 05 / PROMART",
+        state: "DISEÑO AUDITADO",
+        title: "Programa de referidos en Microsoft 365",
+        lede: "Diseño del registro, seguimiento, comunicaciones y bonos del programa Refiere y Gana.",
+        outcome: "4 flujos · 38 tiendas · 7 grupos de reclutamiento",
+        note: "Arquitectura, simulador y plantillas preparados; el cierre productivo no está confirmado.",
+        flow: ["Microsoft Forms", "Power Automate", "Microsoft Lists", "Outlook", "Corte de bonos"],
+        facts: [
+          ["Formulario", "17 preguntas y validaciones de entrada"],
+          ["Simulador", "React/Vite con cinco vistas del proceso"],
+          ["Auditoría", "Microsoft Graph y exports de Power Automate"],
+          ["Hallazgos", "DNIs, placeholders, filtros OData, paginación y HTML"]
+        ]
+      },
+      en: {
+        number: "CASE 05 / PROMART",
+        state: "AUDITED DESIGN",
+        title: "Microsoft 365 referral program",
+        lede: "Design of registration, tracking, communication, and bonus workflows for the Refiere y Gana program.",
+        outcome: "4 flows · 38 stores · 7 recruiting groups",
+        note: "Architecture, simulator, and templates are prepared; production completion is not confirmed.",
+        flow: ["Microsoft Forms", "Power Automate", "Microsoft Lists", "Outlook", "Bonus cutoff"],
+        facts: [
+          ["Form", "17 questions and input validation"],
+          ["Simulator", "React/Vite with five process views"],
+          ["Audit", "Microsoft Graph and Power Automate exports"],
+          ["Findings", "IDs, placeholders, OData filters, pagination, and HTML"]
+        ]
+      }
+    },
+    johalex: {
+      evidence: 4,
+      url: "https://github.com/xanderMMR2/Johalex",
+      es: {
+        number: "CASO 06 / PRODUCTO PROPIO",
+        state: "PRODUCCIÓN",
+        title: "JOHALEX: operación de hotel",
+        lede: "Sistema responsive para operar un hotel familiar de seis habitaciones desde una sola interfaz.",
+        outcome: "Hospedaje, pagos, limpieza, inventario y auditoría",
+        note: "Desplegado en Cloud Run con reglas financieras y movimientos que se anulan o compensan en lugar de borrarse.",
+        flow: ["Equipo del hotel", "Next.js", "Reglas de dominio", "PostgreSQL", "Cloud Run"],
+        facts: [
+          ["Acceso", "Roles super_user, admin y worker"],
+          ["Operación", "Check-in, pagos parciales, check-out y limpieza"],
+          ["Datos", "Neon, Drizzle y auditoría append-only"],
+          ["Seguridad", "Sesiones opacas, cookies seguras y Secret Manager"]
+        ]
+      },
+      en: {
+        number: "CASE 06 / OWN PRODUCT",
+        state: "PRODUCTION",
+        title: "JOHALEX: hotel operations",
+        lede: "Responsive system for running a six-room family hotel from one interface.",
+        outcome: "Stays, payments, cleaning, inventory, and audit history",
+        note: "Deployed on Cloud Run with financial rules and movements that are voided or offset instead of deleted.",
+        flow: ["Hotel team", "Next.js", "Domain rules", "PostgreSQL", "Cloud Run"],
+        facts: [
+          ["Access", "super_user, admin, and worker roles"],
+          ["Operations", "Check-in, partial payments, check-out, and cleaning"],
+          ["Data", "Neon, Drizzle, and append-only audit history"],
+          ["Security", "Opaque sessions, secure cookies, and Secret Manager"]
+        ]
+      }
+    },
+    cobroapp: {
+      evidence: 4,
+      url: "https://github.com/xanderMMR2/CobroApp",
+      es: {
+        number: "CASO 07 / PRODUCTO PROPIO",
+        state: "PRODUCCIÓN",
+        title: "CobroApp: ventas en cuotas y finanzas",
+        lede: "Aplicación propia para registrar ventas, pagos parciales, vencimientos, inventario y movimientos financieros.",
+        outcome: "Frontend, API y base de datos desplegados",
+        note: "Los estados se recalculan desde los pagos; no dependen de una cifra editada manualmente.",
+        flow: ["React", "API Express", "Reglas de cobro", "PostgreSQL", "Cloud Run"],
+        facts: [
+          ["Despliegue", "Cloudflare Pages, Cloud Run y Neon"],
+          ["Seguridad", "JWT, refresh token, bcrypt, CORS y rate limiting"],
+          ["Continuidad", "Backups diarios con retención documentada de 30 días"],
+          ["Dominios", "Cobros, inventario, conciliación y finanzas"]
+        ]
+      },
+      en: {
+        number: "CASE 07 / OWN PRODUCT",
+        state: "PRODUCTION",
+        title: "CobroApp: installment sales and finance",
+        lede: "Own application for tracking sales, partial payments, due dates, inventory, and financial movements.",
+        outcome: "Frontend, API, and database deployed",
+        note: "Statuses are recalculated from payment records rather than relying on a manually edited value.",
+        flow: ["React", "Express API", "Collection rules", "PostgreSQL", "Cloud Run"],
+        facts: [
+          ["Deployment", "Cloudflare Pages, Cloud Run, and Neon"],
+          ["Security", "JWT, refresh tokens, bcrypt, CORS, and rate limiting"],
+          ["Continuity", "Daily backups with documented 30-day retention"],
+          ["Domains", "Collections, inventory, reconciliation, and finance"]
+        ]
+      }
+    }
+  };
+
+  const caseOrder = Object.keys(caseRecords);
+  const visitedCases = new Set([caseOrder[0]]);
+  let currentCase = caseOrder[0];
+  let currentLanguage = "es";
+
+  const storage = {
+    get(key) {
+      try {
+        return window.localStorage.getItem(key);
+      } catch {
+        return null;
+      }
+    },
+    set(key, value) {
+      try {
+        window.localStorage.setItem(key, value);
+      } catch {
+        // The site still works when storage is blocked.
+      }
+    }
+  };
+
+  const byId = (id) => document.getElementById(id);
+  const casePanel = byId("case-panel");
+  const caseTabs = Array.from(document.querySelectorAll(".case-tab"));
+
+  function getPreferredLanguage() {
+    const stored = storage.get("portfolio-language");
+    if (stored && translations[stored]) return stored;
+    const browserLanguage = (navigator.language || "es").split("-")[0];
+    return browserLanguage === "en" ? "en" : "es";
   }
 
-  updateMetricValues(selected);
-}
+  function setLanguage(language) {
+    currentLanguage = translations[language] ? language : "es";
+    storage.set("portfolio-language", currentLanguage);
+    document.documentElement.lang = currentLanguage;
 
-function getPreferredLang() {
-  const saved = localStorage.getItem("lang");
-  if (saved) return saved;
-  const browserLang = navigator.language.split("-")[0];
-  return translations[browserLang] ? browserLang : "en";
-}
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.dataset.i18n;
+      const value = translations[currentLanguage][key];
+      if (value) element.textContent = value;
+    });
 
-if (langToggleBtn) {
-  langToggleBtn.addEventListener("click", () => {
-    const currentLang = localStorage.getItem("lang") || "en";
-    setLanguage(currentLang === "en" ? "es" : "en");
-  });
-}
+    document.title = translations[currentLanguage].page_title;
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.content = translations[currentLanguage].page_description;
 
-const themeToggleBtn = document.getElementById("theme-toggle");
-const themeIcon = document.getElementById("theme-icon");
+    const languageToggle = byId("lang-toggle");
+    const languageLabel = byId("lang-label");
+    if (languageLabel) languageLabel.textContent = currentLanguage === "es" ? "EN" : "ES";
+    if (languageToggle) languageToggle.setAttribute("aria-label", translations[currentLanguage].lang_label);
 
-function getPreferredTheme() {
-  return localStorage.getItem("theme") || "light";
-}
+    byId("previous-case")?.setAttribute("aria-label", translations[currentLanguage].previous_case);
+    byId("previous-case")?.setAttribute("title", translations[currentLanguage].previous_case);
+    byId("next-case")?.setAttribute("aria-label", translations[currentLanguage].next_case);
+    byId("next-case")?.setAttribute("title", translations[currentLanguage].next_case);
+    byId("theme-toggle")?.setAttribute("aria-label", translations[currentLanguage].theme_label);
+    byId("theme-toggle")?.setAttribute("title", translations[currentLanguage].theme_label);
+    if (menuToggle) {
+      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-label", translations[currentLanguage][expanded ? "menu_close" : "menu_open"]);
+    }
 
-function setTheme(theme) {
-  const selected = theme === "dark" ? "dark" : "light";
-  document.documentElement.setAttribute("data-theme", selected);
-  localStorage.setItem("theme", selected);
+    const cvDownload = byId("cv-download");
+    if (cvDownload) {
+      cvDownload.href = currentLanguage === "es"
+        ? "pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-ES.pdf"
+        : "pdfs-finales/CV-Alexander-Melendez-AI-Automation-Engineer-EN.pdf";
+    }
 
-  if (!themeIcon) return;
-
-  if (selected === "dark") {
-    themeIcon.innerHTML =
-      '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
-  } else {
-    themeIcon.innerHTML =
-      '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+    renderCase(currentCase, false);
   }
-}
 
-if (themeToggleBtn) {
-  themeToggleBtn.addEventListener("click", () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    setTheme(currentTheme === "dark" ? "light" : "dark");
+  function renderCase(caseKey, animate = true) {
+    const record = caseRecords[caseKey];
+    if (!record || !casePanel) return;
+
+    currentCase = caseKey;
+    visitedCases.add(caseKey);
+    const content = record[currentLanguage];
+
+    byId("case-number").textContent = content.number;
+    byId("case-state").textContent = content.state;
+    byId("case-title").textContent = content.title;
+    byId("case-lede").textContent = content.lede;
+    byId("case-outcome").textContent = content.outcome;
+    byId("case-outcome-note").textContent = content.note;
+
+    const flow = byId("case-flow");
+    flow.replaceChildren(...content.flow.map((step, index) => {
+      const element = document.createElement("div");
+      element.className = "flow-step";
+      const sequence = document.createElement("span");
+      sequence.textContent = String(index + 1).padStart(2, "0");
+      const label = document.createElement("strong");
+      label.textContent = step;
+      element.append(sequence, label);
+      return element;
+    }));
+
+    const facts = byId("case-facts");
+    facts.replaceChildren(...content.facts.map(([label, value]) => {
+      const item = document.createElement("div");
+      item.className = "case-fact";
+      const heading = document.createElement("span");
+      heading.textContent = label;
+      const detail = document.createElement("p");
+      detail.textContent = value;
+      item.append(heading, detail);
+      return item;
+    }));
+
+    const meter = byId("evidence-meter");
+    meter.replaceChildren(...Array.from({ length: 5 }, (_, index) => {
+      const unit = document.createElement("i");
+      unit.className = `evidence-unit${index < record.evidence ? " on" : ""}`;
+      unit.setAttribute("aria-hidden", "true");
+      return unit;
+    }));
+    meter.setAttribute("aria-label", `${translations[currentLanguage].case_evidence}: ${record.evidence}/5`);
+
+    const caseLink = byId("case-link");
+    if (record.url) {
+      caseLink.href = record.url;
+      caseLink.target = "_blank";
+      caseLink.rel = "noopener";
+      caseLink.textContent = translations[currentLanguage].public_repo;
+    } else {
+      caseLink.href = "#contacto";
+      caseLink.removeAttribute("target");
+      caseLink.removeAttribute("rel");
+      caseLink.textContent = translations[currentLanguage].private_code;
+    }
+
+    caseTabs.forEach((tab) => {
+      const selected = tab.dataset.case === caseKey;
+      tab.classList.toggle("active", selected);
+      tab.setAttribute("aria-selected", String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+
+    const visitedCount = byId("visited-count");
+    if (visitedCount) visitedCount.textContent = `${visitedCases.size} / ${caseOrder.length}`;
+
+    if (animate && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      casePanel.classList.remove("switching");
+      void casePanel.offsetWidth;
+      casePanel.classList.add("switching");
+    }
+  }
+
+  function activateCase(index, focusTab = false) {
+    const normalized = (index + caseOrder.length) % caseOrder.length;
+    const key = caseOrder[normalized];
+    renderCase(key);
+    const tab = caseTabs.find((item) => item.dataset.case === key);
+    if (tab) {
+      tab.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+      if (focusTab) tab.focus();
+    }
+  }
+
+  caseTabs.forEach((tab) => {
+    tab.addEventListener("click", () => renderCase(tab.dataset.case));
+    tab.addEventListener("keydown", (event) => {
+      const index = caseOrder.indexOf(tab.dataset.case);
+      if (["ArrowRight", "ArrowDown"].includes(event.key)) {
+        event.preventDefault();
+        activateCase(index + 1, true);
+      }
+      if (["ArrowLeft", "ArrowUp"].includes(event.key)) {
+        event.preventDefault();
+        activateCase(index - 1, true);
+      }
+      if (event.key === "Home") {
+        event.preventDefault();
+        activateCase(0, true);
+      }
+      if (event.key === "End") {
+        event.preventDefault();
+        activateCase(caseOrder.length - 1, true);
+      }
+    });
   });
-}
 
-function formatMetric(card, lang) {
-  const target = Number.parseFloat(card.dataset.value);
-  const prefix = card.dataset.prefix || "";
-  const suffix = card.dataset.suffix || "";
-  const valueId = card.querySelector(".metric-value")?.id;
-
-  if (valueId === "m4") return lang === "es" ? "3,958+ horas/mes" : "3,958+ hrs/mo";
-  if (valueId === "m5") return "13";
-  if (valueId === "m6") return lang === "es" ? "2.5 semanas" : "2.5 weeks";
-  return `${prefix}${Number(target).toLocaleString()}${suffix}`;
-}
-
-function updateMetricValues(lang) {
-  document.querySelectorAll(".metric-card").forEach((card) => {
-    const valueEl = card.querySelector(".metric-value");
-    if (valueEl) valueEl.textContent = formatMetric(card, lang);
+  byId("previous-case")?.addEventListener("click", () => {
+    activateCase(caseOrder.indexOf(currentCase) - 1);
   });
-}
-
-document.querySelectorAll("a[href^='#']").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const target = document.querySelector(link.getAttribute("href"));
-    if (!target) return;
-    event.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  byId("next-case")?.addEventListener("click", () => {
+    activateCase(caseOrder.indexOf(currentCase) + 1);
   });
-});
 
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-links a");
-const observer = new IntersectionObserver(
-  (entries) => {
+  function setTheme(theme) {
+    const selected = theme === "dark" ? "dark" : "light";
+    document.documentElement.dataset.theme = selected;
+    storage.set("portfolio-theme", selected);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", selected === "dark" ? "#0f110e" : "#f2f3ed");
+    redrawSystemMap();
+  }
+
+  byId("lang-toggle")?.addEventListener("click", () => {
+    setLanguage(currentLanguage === "es" ? "en" : "es");
+  });
+
+  byId("theme-toggle")?.addEventListener("click", () => {
+    setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+  });
+
+  const menuToggle = byId("menu-toggle");
+  const mobileMenu = byId("mobile-menu");
+
+  function closeMobileMenu() {
+    if (!menuToggle || !mobileMenu) return;
+    mobileMenu.hidden = true;
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", translations[currentLanguage].menu_open);
+  }
+
+  menuToggle?.addEventListener("click", () => {
+    if (!mobileMenu) return;
+    const opening = mobileMenu.hidden;
+    mobileMenu.hidden = !opening;
+    menuToggle.setAttribute("aria-expanded", String(opening));
+    menuToggle.setAttribute("aria-label", translations[currentLanguage][opening ? "menu_close" : "menu_open"]);
+  });
+
+  mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMobileMenu));
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1120) closeMobileMenu();
+  });
+
+  const progressBar = byId("scroll-progress-bar");
+  function updateScrollProgress() {
+    const scrollable = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const progress = Math.min(1, window.scrollY / scrollable);
+    if (progressBar) progressBar.style.width = `${progress * 100}%`;
+  }
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  updateScrollProgress();
+
+  const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+  const observedSections = Array.from(document.querySelectorAll("main section[id]"));
+  const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       navLinks.forEach((link) => {
-        link.classList.toggle(
-          "active-link",
-          link.getAttribute("href") === `#${entry.target.id}`
-        );
+        link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
       });
     });
-  },
-  { rootMargin: "-45% 0px -50% 0px" }
-);
+  }, { rootMargin: "-42% 0px -52% 0px", threshold: 0 });
+  observedSections.forEach((section) => sectionObserver.observe(section));
 
-sections.forEach((section) => observer.observe(section));
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reducedMotion) {
+    document.body.classList.add("motion-ready");
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+  }
 
-setLanguage(getPreferredLang());
-setTheme(getPreferredTheme());
+  const metricElements = Array.from(document.querySelectorAll("[data-count]"));
+  const metricObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const element = entry.target;
+      const target = Number(element.dataset.count);
+      const format = element.dataset.format;
+      const duration = reducedMotion ? 0 : 850;
+      const started = performance.now();
+
+      const writeValue = (value) => {
+        const rounded = Math.round(value);
+        if (format === "usd") element.textContent = `$${rounded.toLocaleString("en-US")}`;
+        if (format === "hours") element.textContent = `${rounded.toLocaleString("en-US")}+`;
+        if (format === "plain") element.textContent = rounded.toLocaleString("en-US");
+      };
+
+      const tick = (now) => {
+        const progress = duration === 0 ? 1 : Math.min(1, (now - started) / duration);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        writeValue(target * eased);
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+
+      requestAnimationFrame(tick);
+      observer.unobserve(element);
+    });
+  }, { threshold: 0.7 });
+  metricElements.forEach((element) => metricObserver.observe(element));
+
+  const canvas = byId("system-map");
+  const context = canvas?.getContext("2d");
+  let canvasWidth = 0;
+  let canvasHeight = 0;
+  let animationFrame = 0;
+  let mapRunning = true;
+  let pointerOffset = { x: 0, y: 0 };
+  let lastFrameTime = 0;
+  const particleOffsets = [0.08, 0.26, 0.44, 0.62, 0.8];
+
+  const mapNodes = [
+    { x: 0.1, y: 0.5, es: "REGLAS", en: "RULES", type: "input" },
+    { x: 0.32, y: 0.22, es: ".NET 10", en: ".NET 10", type: "service" },
+    { x: 0.59, y: 0.22, es: "CLOUD RUN", en: "CLOUD RUN", type: "service" },
+    { x: 0.84, y: 0.5, es: "ORACLE / SQL", en: "ORACLE / SQL", type: "input" },
+    { x: 0.61, y: 0.77, es: "REVISIÓN", en: "REVIEW", type: "review" },
+    { x: 0.29, y: 0.77, es: "REPORTE", en: "REPORT", type: "service" }
+  ];
+  const mapLinks = [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [2, 4], [5, 0]];
+
+  function cssColor(variable) {
+    return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+  }
+
+  function resizeCanvas() {
+    if (!canvas || !context) return;
+    const rect = canvas.getBoundingClientRect();
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    canvasWidth = Math.max(1, rect.width);
+    canvasHeight = Math.max(1, rect.height);
+    canvas.width = Math.round(canvasWidth * ratio);
+    canvas.height = Math.round(canvasHeight * ratio);
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    redrawSystemMap();
+  }
+
+  function nodePosition(node) {
+    return {
+      x: node.x * canvasWidth + pointerOffset.x,
+      y: node.y * canvasHeight + pointerOffset.y
+    };
+  }
+
+  function drawGrid(colors) {
+    context.strokeStyle = colors.line;
+    context.lineWidth = 1;
+    const spacing = canvasWidth < 500 ? 42 : 54;
+    for (let x = spacing; x < canvasWidth; x += spacing) {
+      context.beginPath();
+      context.moveTo(x, 0);
+      context.lineTo(x, canvasHeight);
+      context.stroke();
+    }
+    for (let y = spacing; y < canvasHeight; y += spacing) {
+      context.beginPath();
+      context.moveTo(0, y);
+      context.lineTo(canvasWidth, y);
+      context.stroke();
+    }
+  }
+
+  function drawSystemMap(time = 0) {
+    if (!canvas || !context || canvasWidth === 0 || canvasHeight === 0) return;
+    const colors = {
+      surface: cssColor("--surface"),
+      ink: cssColor("--ink"),
+      muted: cssColor("--muted"),
+      line: cssColor("--line"),
+      signal: cssColor("--signal"),
+      input: cssColor("--blue"),
+      service: cssColor("--teal"),
+      review: cssColor("--red")
+    };
+
+    context.clearRect(0, 0, canvasWidth, canvasHeight);
+    context.fillStyle = colors.surface;
+    context.fillRect(0, 0, canvasWidth, canvasHeight);
+    drawGrid(colors);
+
+    mapLinks.forEach(([fromIndex, toIndex], linkIndex) => {
+      const from = nodePosition(mapNodes[fromIndex]);
+      const to = nodePosition(mapNodes[toIndex]);
+      context.strokeStyle = colors.muted;
+      context.lineWidth = 1.2;
+      context.beginPath();
+      context.moveTo(from.x, from.y);
+      context.lineTo(to.x, to.y);
+      context.stroke();
+
+      const offset = particleOffsets[linkIndex % particleOffsets.length];
+      const progress = reducedMotion ? 0.55 : (offset + time * 0.000075 * (1 + linkIndex * 0.08)) % 1;
+      const x = from.x + (to.x - from.x) * progress;
+      const y = from.y + (to.y - from.y) * progress;
+      context.fillStyle = linkIndex % 3 === 0 ? colors.signal : colors.service;
+      context.fillRect(x - 3, y - 3, 6, 6);
+    });
+
+    const nodeWidth = Math.max(64, Math.min(112, canvasWidth * 0.15));
+    const nodeHeight = canvasWidth < 500 ? 34 : 42;
+    const fontSize = canvasWidth < 500 ? 8 : 10;
+
+    mapNodes.forEach((node) => {
+      const position = nodePosition(node);
+      const nodeColor = colors[node.type];
+      context.fillStyle = colors.surface;
+      context.strokeStyle = nodeColor;
+      context.lineWidth = 2;
+      context.fillRect(position.x - nodeWidth / 2, position.y - nodeHeight / 2, nodeWidth, nodeHeight);
+      context.strokeRect(position.x - nodeWidth / 2, position.y - nodeHeight / 2, nodeWidth, nodeHeight);
+      context.fillStyle = nodeColor;
+      context.fillRect(position.x - nodeWidth / 2, position.y - nodeHeight / 2, 5, nodeHeight);
+      context.fillStyle = colors.ink;
+      context.font = `600 ${fontSize}px "IBM Plex Mono", monospace`;
+      context.textAlign = "center";
+      context.textBaseline = "middle";
+      context.fillText(node[currentLanguage], position.x + 2, position.y, nodeWidth - 14);
+    });
+  }
+
+  function animateSystemMap(time) {
+    if (!mapRunning || reducedMotion) return;
+    if (time - lastFrameTime > 24) {
+      drawSystemMap(time);
+      lastFrameTime = time;
+    }
+    animationFrame = requestAnimationFrame(animateSystemMap);
+  }
+
+  function redrawSystemMap() {
+    drawSystemMap(performance.now());
+  }
+
+  if (canvas && context) {
+    const canvasObserver = new IntersectionObserver((entries) => {
+      mapRunning = entries.some((entry) => entry.isIntersecting) && !document.hidden;
+      cancelAnimationFrame(animationFrame);
+      if (mapRunning && !reducedMotion) animationFrame = requestAnimationFrame(animateSystemMap);
+      if (!mapRunning || reducedMotion) redrawSystemMap();
+    }, { threshold: 0.05 });
+    canvasObserver.observe(canvas);
+
+    canvas.addEventListener("pointermove", (event) => {
+      if (reducedMotion) return;
+      const rect = canvas.getBoundingClientRect();
+      pointerOffset = {
+        x: ((event.clientX - rect.left) / rect.width - 0.5) * 8,
+        y: ((event.clientY - rect.top) / rect.height - 0.5) * 8
+      };
+    });
+    canvas.addEventListener("pointerleave", () => {
+      pointerOffset = { x: 0, y: 0 };
+    });
+
+    const resizeObserver = new ResizeObserver(resizeCanvas);
+    resizeObserver.observe(canvas);
+    document.addEventListener("visibilitychange", () => {
+      mapRunning = !document.hidden;
+      cancelAnimationFrame(animationFrame);
+      if (mapRunning && !reducedMotion) animationFrame = requestAnimationFrame(animateSystemMap);
+    });
+  }
+
+  byId("previous-case")?.setAttribute("aria-label", translations.es.previous_case);
+  byId("next-case")?.setAttribute("aria-label", translations.es.next_case);
+  byId("theme-toggle")?.setAttribute("aria-label", translations.es.theme_label);
+
+  setTheme(storage.get("portfolio-theme") || "light");
+  setLanguage(getPreferredLanguage());
+  renderCase(currentCase, false);
+})();
