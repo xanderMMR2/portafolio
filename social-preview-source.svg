@@ -13,7 +13,7 @@
 
     <text x="72" y="366" font-size="22" fill="#5E5D58">
       <tspan x="72" dy="0">Automation Anywhere A360</tspan>
-      <tspan x="72" dy="36">AI-assisted development</tspan>
+      <tspan x="72" dy="36">Process automation · applied AI</tspan>
     </text>
 
     <text x="72" y="558" font-size="18" font-weight="500" fill="#1646A0">xandermmr2.github.io/portafolio</text>
@@ -34,8 +34,8 @@
 
     <g transform="translate(680 398)">
       <rect width="448" height="142" fill="#ECE9F2"/>
-      <text x="28" y="43" font-size="18" font-weight="500" fill="#554C6C">IFRS 16</text>
-      <text x="28" y="101" font-size="27" font-weight="600" fill="#554C6C">Contracts → monthly close</text>
+      <text x="28" y="43" font-size="18" font-weight="500" fill="#554C6C">Treasury reconciliation</text>
+      <text x="28" y="101" font-size="27" font-weight="600" fill="#554C6C">38 people → 3 supervisors</text>
     </g>
   </g>
 </svg>
