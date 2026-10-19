@@ -20,8 +20,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261019-summary" />
-    <script src="script.js?v=20261019-summary" defer></script>
+    <link rel="stylesheet" href="style.css?v=20261019-projects2" />
+    <script src="script.js?v=20261019-projects2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
@@ -92,9 +92,8 @@
             <div class="project-content">
               <div class="project-topline"><span class="project-category" data-i18n="treasury_category">OPERACIONES</span><span class="project-state" data-i18n="status_in_production">En producción</span></div>
               <h3 id="treasury-title" data-i18n="project_treasury_title">Conciliación diaria de tesorería</h3>
+              <div class="project-outcome"><strong>38 → 3</strong><span data-i18n="treasury_outcome">De 38 tesoreras a 3 supervisoras</span></div>
               <p class="project-summary" data-i18n="treasury_short">Automaticé en A360 la conciliación diaria entre tres aplicaciones internas, Excel y correo.</p>
-              <div class="project-schematic" aria-hidden="true"><span>Excel</span><b>→</b><span>A360</span><b>→</b><span data-i18n="schematic_supervision">Supervisión</span></div>
-              <div class="project-outcome"><strong>38 → 3</strong><span data-i18n="treasury_outcome">Tesorería: de ejecución manual a supervisión</span></div>
               <p class="project-tech">Automation Anywhere A360 · Excel</p>
               <button class="case-link" type="button" data-case="caso-conciliacion-tesoreria" aria-haspopup="dialog" aria-controls="caso-conciliacion-tesoreria"><span data-i18n="view_case">Ver caso</span><span aria-hidden="true">↗</span></button>
             </div>
@@ -103,9 +102,8 @@
             <div class="project-content">
               <div class="project-topline"><span class="project-category" data-i18n="promotions_category">PRECIOS</span><span class="project-state" data-i18n="status_in_production">En producción</span></div>
               <h3 id="promotions-title" data-i18n="project_promotions_title">Carga y validación de promociones</h3>
-              <p class="project-summary" data-i18n="promotions_short">Definí y validé reglas de precios, stock, márgenes y vigencias; el portal separa las excepciones para revisión humana.</p>
-              <div class="project-schematic" aria-hidden="true"><span data-i18n="schematic_input">Precios y stock</span><b>→</b><span data-i18n="schematic_rules">Validación</span><b>→</b><span data-i18n="schematic_result">Excel / JSON</span></div>
               <div class="project-outcome"><strong>3 h → 2 min</strong><span data-i18n="promotions_outcome">Tiempo de procesamiento por lote diario</span></div>
+              <p class="project-summary" data-i18n="promotions_short">Definí y validé reglas de precios, stock, márgenes y vigencias; el portal separa las excepciones para revisión humana.</p>
               <p class="project-tech">.NET · Oracle · GCP Cloud Run</p>
               <button class="case-link" type="button" data-case="caso-promociones" aria-haspopup="dialog" aria-controls="caso-promociones"><span data-i18n="view_case">Ver caso</span><span aria-hidden="true">↗</span></button>
             </div>
@@ -114,9 +112,8 @@
             <div class="project-content">
               <div class="project-topline"><span class="project-category" data-i18n="content_category">IA APLICADA</span><span class="project-state" data-i18n="status_implemented">Implementado</span></div>
               <h3 id="content-title" data-i18n="project_content_title">Contenido para productos</h3>
-              <p class="project-summary" data-i18n="content_short">Migré a Cloud Run la generación de contenido de catálogo que antes se ejecutaba en A360.</p>
-              <div class="project-schematic" aria-hidden="true"><span data-i18n="schematic_data">Datos</span><b>→</b><span>OpenAI API</span><b>→</b><span>SharePoint</span></div>
-              <div class="project-outcome"><strong>Nombres · Descripciones · HTML</strong><span data-i18n="content_outcome">Archivos generados y publicados en SharePoint</span></div>
+              <div class="project-outcome project-outcome--technical"><strong>OpenAI API + SharePoint</strong><span data-i18n="content_outcome">Nombres, descripciones y HTML publicados tras validación</span></div>
+              <p class="project-summary" data-i18n="content_short">Migré el proceso de A360 a Python en Cloud Run e incorporé validación de las respuestas generadas.</p>
               <p class="project-tech">Python · OpenAI API · Microsoft Graph</p>
               <button class="case-link" type="button" data-case="caso-contenido-productos" aria-haspopup="dialog" aria-controls="caso-contenido-productos"><span data-i18n="view_case">Ver caso</span><span aria-hidden="true">↗</span></button>
             </div>
