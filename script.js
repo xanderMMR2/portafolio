@@ -57,13 +57,6 @@
     "hero_eyebrow": "AUTOMATION ANYWHERE A360 · OPENAI API",
     "hero_part_one": "Ingeniero de",
     "hero_part_two": "Automatización con IA",
-    "flow_caption": "GENERACIÓN DE CONTENIDO PARA PRODUCTOS",
-    "flow_sources": "Datos de productos",
-    "flow_sources_note": "Excel y servicio web",
-    "flow_engine": "Python + OpenAI API",
-    "flow_engine_note": "Generación y validación de HTML",
-    "flow_outputs": "Archivos publicados",
-    "flow_outputs_note": "SharePoint mediante Microsoft Graph",
     "treasury_category": "OPERACIONES",
     "treasury_short": "Automaticé en A360 la conciliación diaria entre tres aplicaciones internas, Excel y correo.",
     "treasury_outcome": "Tesorería: de ejecución manual a supervisión",
@@ -84,8 +77,8 @@
     "skill_cloud_note": "Ejecución de jobs Python y servicios .NET.",
     "skill_api_note": "Descarga y publicación de archivos en SharePoint.",
     "other_tools": "Otras herramientas utilizadas",
-    "cert_note": "Certificación: Automation Anywhere Certified Master RPA Professional · 2024",
-    "contact_action": "Contactar"
+    "contact_action": "Contactar",
+    "career_scope": "Conteo histórico: PROMART y Global Hitss"
   },
   "en": {
     "page_title": "Alexander Meléndez | AI Automation Engineer",
@@ -144,13 +137,6 @@
     "hero_eyebrow": "AUTOMATION ANYWHERE A360 · OPENAI API",
     "hero_part_one": "AI",
     "hero_part_two": "Automation Engineer",
-    "flow_caption": "PRODUCT CONTENT GENERATION",
-    "flow_sources": "Product data",
-    "flow_sources_note": "Excel and web service",
-    "flow_engine": "Python + OpenAI API",
-    "flow_engine_note": "HTML generation and validation",
-    "flow_outputs": "Published files",
-    "flow_outputs_note": "SharePoint via Microsoft Graph",
     "treasury_category": "OPERATIONS",
     "treasury_short": "I automated daily reconciliation across three internal applications, Excel and email using A360.",
     "treasury_outcome": "Treasury: from manual processing to oversight",
@@ -171,8 +157,8 @@
     "skill_cloud_note": "Running Python jobs and .NET services.",
     "skill_api_note": "Downloading and publishing files through SharePoint.",
     "other_tools": "Other tools used",
-    "cert_note": "Certification: Automation Anywhere Certified Master RPA Professional · 2024",
-    "contact_action": "Get in touch"
+    "contact_action": "Get in touch",
+    "career_scope": "Historical count: PROMART and Global Hitss"
   }
 };
 
