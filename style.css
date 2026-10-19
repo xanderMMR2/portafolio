@@ -54,4 +54,20 @@ body.dialog-open{overflow:hidden}.case-dialog{border:1px solid #cfdfd5;backgroun
 @media(max-width:1100px){:root{--page-pad:30px}.hero{gap:45px}.skills-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.nav-links{gap:16px}.project-content{padding:20px}.project-case h3{font-size:21px}}
 @media(max-width:850px){:root{--page-pad:24px}.nav-links{display:none}.menu-toggle{display:inline-flex}.hero{grid-template-columns:1fr;gap:43px;padding-top:65px;padding-bottom:72px;min-height:0}.hero-highlights{max-width:none;justify-self:stretch}.project-cases{grid-template-columns:1fr 1fr}.experience-list{grid-template-columns:1fr 1fr;row-gap:35px}.contact-section{grid-template-columns:1fr;gap:22px}}
 @media(max-width:590px){:root{--page-pad:18px;--header-height:64px}.identity-location{display:none}.nav-shell{gap:10px}.identity-name{font-size:13px}.nav-actions .text-control,.nav-actions .nav-cv,.nav-actions .menu-toggle{height:36px;min-height:36px;padding:0 10px}.hero{padding-top:54px;padding-bottom:58px;gap:33px}.hero h1{font-size:clamp(38px,11vw,55px)}.hero-summary{font-size:15px}.hero-highlights{padding:28px 24px;gap:27px}.highlight-main>strong{font-size:82px}.highlight-details{gap:13px;padding-top:23px}.highlight-details strong{font-size:16px}.highlight-details span{font-size:11px}.work-section,.experience-section,.profile-section{padding-top:65px;padding-bottom:65px}.section-heading h2{font-size:32px}.project-cases,.experience-list,.skills-grid{grid-template-columns:1fr}.project-summary{min-height:0}.project-content{padding:24px}.project-case h3{min-height:0}.project-outcome{min-height:112px}.skill-card{min-height:0}.experience-list{gap:28px}.contact-section{margin-left:12px;margin-right:12px;width:auto;padding:35px 22px}.contact-copy h2{font-size:32px}.site-footer{flex-direction:column;gap:12px}.dialog-header{padding:20px;flex-direction:column}.dialog-header h2{font-size:24px}.dialog-body{padding:22px 20px}.case-sections section{grid-template-columns:1fr;gap:8px}.dialog-shell{max-height:90dvh}.case-dialog{max-height:90dvh}}
+
+/* Light visual cues: no scores, badges or fictional achievements. */
+.section-heading h2,.contact-copy h2{display:flex;align-items:center;gap:13px}
+.section-emoji{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:#edf7f0;font-family:"Apple Color Emoji","Segoe UI Emoji",sans-serif;font-size:21px;line-height:1;letter-spacing:0}
+@keyframes subtle-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+body.motion-ready .reveal.visible{animation:subtle-enter .5s cubic-bezier(.2,.7,.2,1)}
+.primary-link span[aria-hidden="true"],.case-link span[aria-hidden="true"]{display:inline-block;transition:transform .2s ease}
+@media(hover:hover){
+  .primary-link:hover span[aria-hidden="true"],.case-link:hover span[aria-hidden="true"]{transform:translate(3px,-2px)}
+  .skill-card{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+  .skill-card:hover{transform:translateY(-3px);border-color:#c4dbcb;box-shadow:0 10px 24px rgba(37,44,42,.045)}
+  .project-outcome strong{transition:transform .22s ease}
+  .project-case:hover .project-outcome strong{transform:translateY(-2px)}
+}
+@media(max-width:590px){.section-emoji{width:34px;height:34px;border-radius:10px;font-size:18px}.section-heading h2,.contact-copy h2{gap:10px}}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
