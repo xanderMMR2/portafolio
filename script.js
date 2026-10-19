@@ -152,6 +152,22 @@
   }
 };
 
+  // Show a text mark only if the external Automation Anywhere favicon cannot load.
+  document.querySelectorAll(".brand-image").forEach((image) => {
+    const fallback = image.parentElement?.querySelector(".brand-logo-fallback");
+    if (!fallback) return;
+    const sync = () => {
+      const unavailable = !image.naturalWidth;
+      image.hidden = unavailable;
+      fallback.hidden = !unavailable;
+    };
+    if (image.complete) sync();
+    else {
+      image.addEventListener("load", sync, { once: true });
+      image.addEventListener("error", sync, { once: true });
+    }
+  });
+
   const byId = (id) => document.getElementById(id);
   const storage = {
     get(key) {
